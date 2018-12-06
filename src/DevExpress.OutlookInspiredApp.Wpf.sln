@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpress.OutlookInspiredApp.Wpf", "DevExpress.OutlookInspiredApp.Wpf\DevExpress.OutlookInspiredApp.Wpf.csproj", "{D3B37908-DE44-4835-B539-18633C8F6647}"
 EndProject
 Global
@@ -12,10 +14,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Debug|Any CPU.ActiveCfg = ClickOnce Debug|Any CPU
-		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Debug|Any CPU.Build.0 = ClickOnce Debug|Any CPU
-		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Release|Any CPU.ActiveCfg = ClickOnce Release|Any CPU
-		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Release|Any CPU.Build.0 = ClickOnce Release|Any CPU
+		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B37908-DE44-4835-B539-18633C8F6647}.ClickOnce Release|Any CPU.Build.0 = Release|Any CPU
 		{D3B37908-DE44-4835-B539-18633C8F6647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3B37908-DE44-4835-B539-18633C8F6647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B37908-DE44-4835-B539-18633C8F6647}.DebugTest|Any CPU.ActiveCfg = DebugTest|Any CPU
@@ -25,5 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E06C385-E5E2-4AE1-8751-80FF293AB864}
 	EndGlobalSection
 EndGlobal
