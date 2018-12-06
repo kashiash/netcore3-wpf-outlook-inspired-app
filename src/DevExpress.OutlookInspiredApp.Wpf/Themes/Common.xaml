@@ -1,0 +1,36 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:viewModel="clr-namespace:DevExpress.DevAV.ViewModels"
+    xmlns:local="clr-namespace:DevExpress.DevAV">
+
+    <DataTemplate DataType="{x:Type dxmvvm:EnumMemberInfo}" x:Key="OutlookInspiredEnumMemberInfoTemplate">
+        <StackPanel Orientation="Horizontal">
+            <dx:DXImage Source="{Binding Image}" Margin="2"/>
+            <TextBlock Text="{Binding Name}" Margin="12,0" FontWeight="Bold" VerticalAlignment="Center"/>
+        </StackPanel>
+    </DataTemplate>
+    <dxmvvm:ObjectToObjectConverter x:Key="personPrefixToImageConverter">
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Doctor.svg'}" Source="Dr" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Mr.svg'}" Source="Mr" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Ms.svg'}" Source="Ms" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Miss.svg'}" Source="Miss" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Mrs.svg'}" Source="Mrs" />
+    </dxmvvm:ObjectToObjectConverter>
+    <DataTemplate x:Key="fileViewTemplate">
+        <Grid Width="80" ToolTip="{Binding Name}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Stretch="None" Source="{Binding Icon}"/>
+            <TextBlock Grid.Row="1" Text="{Binding DisplayName}" Margin="0,5,0,0" HorizontalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+        </Grid>
+    </DataTemplate>
+
+
+</ResourceDictionary>

@@ -1,0 +1,910 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\bin\</OutputPath>
+  </PropertyGroup>
+  
+  
+  <ItemGroup>
+    <None Remove="Resources\About.svg" />
+    <None Remove="Resources\Active.svg" />
+    <None Remove="Resources\AddColumn.svg" />
+    <None Remove="Resources\AddFile.svg" />
+    <None Remove="Resources\Analysis\CustomerAnalysis.xlsx" />
+    <None Remove="Resources\Analysis\ProductAnalysis.xlsx" />
+    <None Remove="Resources\AssignTask.svg" />
+    <None Remove="Resources\AttachFile.svg" />
+    <None Remove="Resources\Buttons\Glyph_Mail.svg" />
+    <None Remove="Resources\Buttons\Glyph_Message.svg" />
+    <None Remove="Resources\Buttons\Glyph_Phone.svg" />
+    <None Remove="Resources\Buttons\Glyph_Video.svg" />
+    <None Remove="Resources\Buy.svg" />
+    <None Remove="Resources\Card.svg" />
+    <None Remove="Resources\Categorize.svg" />
+    <None Remove="Resources\ChangeView.svg" />
+    <None Remove="Resources\Close.svg" />
+    <None Remove="Resources\Controls\Export.svg" />
+    <None Remove="Resources\Controls\ExportToPDF.svg" />
+    <None Remove="Resources\Controls\ExportToRTF.svg" />
+    <None Remove="Resources\Controls\ExportToXLS.svg" />
+    <None Remove="Resources\Controls\PageNext.svg" />
+    <None Remove="Resources\Controls\PagePrevious.svg" />
+    <None Remove="Resources\Controls\Pages.svg" />
+    <None Remove="Resources\Controls\Scale.svg" />
+    <None Remove="Resources\CostAnalysis.svg" />
+    <None Remove="Resources\DataPanel.svg" />
+    <None Remove="Resources\Delete.svg" />
+    <None Remove="Resources\Detailed.svg" />
+    <None Remove="Resources\DetailView.svg" />
+    <None Remove="Resources\Doctor.svg" />
+    <None Remove="Resources\Driving.svg" />
+    <None Remove="Resources\Edit.svg" />
+    <None Remove="Resources\EmployeeCard.svg" />
+    <None Remove="Resources\ExpandCollapse.svg" />
+    <None Remove="Resources\Filter.svg" />
+    <None Remove="Resources\FolderPanel2.svg" />
+    <None Remove="Resources\GettingStarted.svg" />
+    <None Remove="Resources\HideProduct.svg" />
+    <None Remove="Resources\High.svg" />
+    <None Remove="Resources\HighImportance.svg" />
+    <None Remove="Resources\Jolt-Logo.png" />
+    <None Remove="Resources\List.svg" />
+    <None Remove="Resources\Low.svg" />
+    <None Remove="Resources\LowImportance.svg" />
+    <None Remove="Resources\MailMerge.svg" />
+    <None Remove="Resources\MailMerge\Employee of the Month.rtf" />
+    <None Remove="Resources\MailMerge\Employee of the Month.snx" />
+    <None Remove="Resources\MailMerge\Employee Probation Notice.rtf" />
+    <None Remove="Resources\MailMerge\Employee Probation Notice.snx" />
+    <None Remove="Resources\MailMerge\Employee Service Excellence.rtf" />
+    <None Remove="Resources\MailMerge\Employee Service Excellence.snx" />
+    <None Remove="Resources\MailMerge\Employee Thank You Note.rtf" />
+    <None Remove="Resources\MailMerge\Employee Thank You Note.snx" />
+    <None Remove="Resources\MailMerge\Order.snx" />
+    <None Remove="Resources\MailMerge\Sales Analysys Report.snx" />
+    <None Remove="Resources\MailMerge\Sales Invoice.snx" />
+    <None Remove="Resources\MailMerge\Sales Order Follow-Up Detail.rtf" />
+    <None Remove="Resources\MailMerge\Sales Order Follow-Up.rtf" />
+    <None Remove="Resources\MailMerge\Sales Order Summary Report.snx" />
+    <None Remove="Resources\MailMerge\Sales Thank You.rtf" />
+    <None Remove="Resources\MailMerge\Sales Thank You.snx" />
+    <None Remove="Resources\MailMerge\Welcome to DevAV.rtf" />
+    <None Remove="Resources\MailMerge\Welcome to DevAV.snx" />
+    <None Remove="Resources\Mapit.svg" />
+    <None Remove="Resources\MapItems\A.svg" />
+    <None Remove="Resources\MapItems\ArrowBearLeft.svg" />
+    <None Remove="Resources\MapItems\ArrowBearRight.svg" />
+    <None Remove="Resources\MapItems\ArrowForward.svg" />
+    <None Remove="Resources\MapItems\ArrowLeft.svg" />
+    <None Remove="Resources\MapItems\ArrowRight.svg" />
+    <None Remove="Resources\MapItems\B.svg" />
+    <None Remove="Resources\MapItems\RevertDirection.svg" />
+    <None Remove="Resources\MarkComplete.svg" />
+    <None Remove="Resources\Medium.svg" />
+    <None Remove="Resources\Meeting.svg" />
+    <None Remove="Resources\Miss.svg" />
+    <None Remove="Resources\Modules\Customers.svg" />
+    <None Remove="Resources\Modules\Employees.svg" />
+    <None Remove="Resources\Modules\Opportunities.svg" />
+    <None Remove="Resources\Modules\Products.svg" />
+    <None Remove="Resources\Modules\Sales.svg" />
+    <None Remove="Resources\Modules\Tasks.svg" />
+    <None Remove="Resources\Mr.svg" />
+    <None Remove="Resources\Mrs.svg" />
+    <None Remove="Resources\Ms.svg" />
+    <None Remove="Resources\Navigation.svg" />
+    <None Remove="Resources\New.svg" />
+    <None Remove="Resources\NewCustomer.svg" />
+    <None Remove="Resources\NewEmploye.svg" />
+    <None Remove="Resources\NewOpportunities.svg" />
+    <None Remove="Resources\NewOrder.svg" />
+    <None Remove="Resources\NewProduct.svg" />
+    <None Remove="Resources\NewTask.svg" />
+    <None Remove="Resources\NextRecord.svg" />
+    <None Remove="Resources\NormalView.svg" />
+    <None Remove="Resources\Open.svg" />
+    <None Remove="Resources\Orders\Payment.svg" />
+    <None Remove="Resources\Orders\PaymentPaid.svg" />
+    <None Remove="Resources\Orders\PaymentRefund.svg" />
+    <None Remove="Resources\Orders\PaymentUnpaid.svg" />
+    <None Remove="Resources\Orders\Shipment.svg" />
+    <None Remove="Resources\Orders\ShipmentAwaiting.svg" />
+    <None Remove="Resources\Orders\ShipmentReceived.svg" />
+    <None Remove="Resources\Orders\ShipmentTransit.svg" />
+    <None Remove="Resources\Overview-Buy-Normal.png" />
+    <None Remove="Resources\Overview-Getting-Started-Normal.png" />
+    <None Remove="Resources\Overview-Logo.png" />
+    <None Remove="Resources\Overview-Support-Normal.png" />
+    <None Remove="Resources\Paid.svg" />
+    <None Remove="Resources\PanelBottom.svg" />
+    <None Remove="Resources\PanelOff.svg" />
+    <None Remove="Resources\PanelRight.svg" />
+    <None Remove="Resources\PreviousRecord.svg" />
+    <None Remove="Resources\Print.svg" />
+    <None Remove="Resources\PrintExcludeEvaluations.svg" />
+    <None Remove="Resources\PrintIncludeEvaluations.svg" />
+    <None Remove="Resources\PrintItems\CustomerContactDirectory.svg" />
+    <None Remove="Resources\PrintItems\CustomerProfileReport.svg" />
+    <None Remove="Resources\PrintItems\EmployeeDirectory.svg" />
+    <None Remove="Resources\PrintItems\EmployeeProfile.svg" />
+    <None Remove="Resources\PrintItems\EmployeeSummary.svg" />
+    <None Remove="Resources\PrintItems\ProductOrderDetail.svg" />
+    <None Remove="Resources\PrintItems\ProductSpecificationsSummary.svg" />
+    <None Remove="Resources\PrintPreview.svg" />
+    <None Remove="Resources\PrintQuick.svg" />
+    <None Remove="Resources\Prioritized.svg" />
+    <None Remove="Resources\Priority\HighPriority.svg" />
+    <None Remove="Resources\Priority\LowPriority.svg" />
+    <None Remove="Resources\Priority\MediumPriority.svg" />
+    <None Remove="Resources\Priority\NormalPriority.svg" />
+    <None Remove="Resources\Private.svg" />
+    <None Remove="Resources\QuickItems\CustomerQuickLocations.svg" />
+    <None Remove="Resources\QuickItems\CustomerQuickSales.svg" />
+    <None Remove="Resources\QuickItems\EmployeeQuickAward.svg" />
+    <None Remove="Resources\QuickItems\EmployeeQuickExellece.svg" />
+    <None Remove="Resources\QuickItems\EmployeeQuickProbationNotice.svg" />
+    <None Remove="Resources\QuickItems\EmployeeQuickWelcome.svg" />
+    <None Remove="Resources\QuickItems\ProductQuickComparisons.svg" />
+    <None Remove="Resources\QuickItems\ProductQuickShipments.svg" />
+    <None Remove="Resources\QuickItems\ProductQuickTopSalesperson.svg" />
+    <None Remove="Resources\ReadingView.svg" />
+    <None Remove="Resources\Redo.svg" />
+    <None Remove="Resources\Refund.svg" />
+    <None Remove="Resources\ResetChanges.svg" />
+    <None Remove="Resources\ResetView.svg" />
+    <None Remove="Resources\ReversSort.svg" />
+    <None Remove="Resources\RibbonStyle\Office2010.svg" />
+    <None Remove="Resources\RibbonStyle\OfficeSlim.svg" />
+    <None Remove="Resources\RibbonStyle\TabletOffice.svg" />
+    <None Remove="Resources\SalesAnalysis.svg" />
+    <None Remove="Resources\SalesInvoice.svg" />
+    <None Remove="Resources\SalesInvoice.xltx" />
+    <None Remove="Resources\SalesInvoise2.svg" />
+    <None Remove="Resources\SalesPeriodLifetime.svg" />
+    <None Remove="Resources\SalesPeriodMonth.svg" />
+    <None Remove="Resources\SalesPeriodYear.svg" />
+    <None Remove="Resources\SalesSummary.svg" />
+    <None Remove="Resources\SalesSummary2.svg" />
+    <None Remove="Resources\Save.svg" />
+    <None Remove="Resources\SaveAndClose.svg" />
+    <None Remove="Resources\SaveAs.svg" />
+    <None Remove="Resources\SendDocumentViaEmail.svg" />
+    <None Remove="Resources\ShowDueDate.svg" />
+    <None Remove="Resources\ShowProduct.svg" />
+    <None Remove="Resources\ShowStartDate.svg" />
+    <None Remove="Resources\SortAsc.svg" />
+    <None Remove="Resources\SortByInvoice.svg" />
+    <None Remove="Resources\SortByOrderDate.svg" />
+    <None Remove="Resources\SortDesc.svg" />
+    <None Remove="Resources\Support.svg" />
+    <None Remove="Resources\Task.svg" />
+    <None Remove="Resources\TaskList.svg" />
+    <None Remove="Resources\Tasks\Completed.svg" />
+    <None Remove="Resources\Tasks\Custom.svg" />
+    <None Remove="Resources\Tasks\Deferred.svg" />
+    <None Remove="Resources\Tasks\FollowUp.svg" />
+    <None Remove="Resources\Tasks\FollowUpAll.svg" />
+    <None Remove="Resources\Tasks\InProgress.svg" />
+    <None Remove="Resources\Tasks\NeedAssistance.svg" />
+    <None Remove="Resources\Tasks\NextWeek.svg" />
+    <None Remove="Resources\Tasks\NoDate.svg" />
+    <None Remove="Resources\Tasks\NotStarted.svg" />
+    <None Remove="Resources\Tasks\ThisWeek.svg" />
+    <None Remove="Resources\Tasks\Today.svg" />
+    <None Remove="Resources\Tasks\Tomorrow.svg" />
+    <None Remove="Resources\ThankYou.svg" />
+    <None Remove="Resources\UISuperHero.png" />
+    <None Remove="Resources\Undo.svg" />
+    <None Remove="Resources\Unlike.svg" />
+    <None Remove="Resources\Walking.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\About.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Active.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AddColumn.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AddFile.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AssignTask.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AttachFile.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buttons\Glyph_Mail.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buttons\Glyph_Message.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buttons\Glyph_Phone.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buttons\Glyph_Video.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buy.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Card.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Categorize.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ChangeView.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Close.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\Export.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\ExportToPDF.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\ExportToRTF.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\ExportToXLS.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\PageNext.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\PagePrevious.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\Pages.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Controls\Scale.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CostAnalysis.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DataPanel.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Delete.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Detailed.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DetailView.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Doctor.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Driving.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Edit.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EmployeeCard.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ExpandCollapse.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Filter.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\FolderPanel2.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GettingStarted.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HideProduct.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\High.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HighImportance.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jolt-Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\List.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Low.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LowImportance.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MailMerge.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mapit.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\A.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\ArrowBearLeft.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\ArrowBearRight.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\ArrowForward.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\ArrowLeft.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\ArrowRight.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\B.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MapItems\RevertDirection.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MarkComplete.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Medium.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Meeting.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Miss.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Modules\Customers.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Modules\Employees.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Modules\Opportunities.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Modules\Products.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Modules\Sales.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Modules\Tasks.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mr.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mrs.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ms.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Navigation.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\New.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NewCustomer.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NewEmploye.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NewOpportunities.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NewOrder.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NewProduct.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NewTask.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NextRecord.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NormalView.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Open.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\Payment.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\PaymentPaid.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\PaymentRefund.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\PaymentUnpaid.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\Shipment.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\ShipmentAwaiting.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\ShipmentReceived.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Orders\ShipmentTransit.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Overview-Buy-Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Overview-Getting-Started-Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Overview-Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Overview-Support-Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Paid.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PanelBottom.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PanelOff.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PanelRight.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PreviousRecord.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Print.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintExcludeEvaluations.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintIncludeEvaluations.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\CustomerContactDirectory.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\CustomerProfileReport.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\EmployeeDirectory.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\EmployeeProfile.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\EmployeeSummary.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\ProductOrderDetail.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintItems\ProductSpecificationsSummary.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintPreview.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrintQuick.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Prioritized.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Priority\HighPriority.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Priority\LowPriority.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Priority\MediumPriority.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Priority\NormalPriority.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Private.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\CustomerQuickLocations.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\CustomerQuickSales.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\EmployeeQuickAward.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\EmployeeQuickExellece.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\EmployeeQuickProbationNotice.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\EmployeeQuickWelcome.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\ProductQuickComparisons.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\ProductQuickShipments.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QuickItems\ProductQuickTopSalesperson.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReadingView.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Redo.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Refund.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ResetChanges.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ResetView.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReversSort.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RibbonStyle\Office2010.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RibbonStyle\OfficeSlim.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RibbonStyle\TabletOffice.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesAnalysis.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesInvoice.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesInvoise2.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesPeriodLifetime.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesPeriodMonth.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesPeriodYear.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesSummary.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SalesSummary2.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Save.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SaveAndClose.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SaveAs.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SendDocumentViaEmail.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ShowDueDate.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ShowProduct.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ShowStartDate.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SortAsc.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SortByInvoice.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SortByOrderDate.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SortDesc.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Support.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Task.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskList.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\Completed.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\Custom.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\Deferred.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\FollowUp.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\FollowUpAll.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\InProgress.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\NeedAssistance.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\NextWeek.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\NoDate.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\NotStarted.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\ThisWeek.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\Today.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tasks\Tomorrow.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ThankYou.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\UISuperHero.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Undo.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Unlike.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Walking.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Analysis\CustomerAnalysis.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Analysis\ProductAnalysis.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee of the Month.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee of the Month.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Probation Notice.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Probation Notice.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Service Excellence.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Service Excellence.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Thank You Note.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Thank You Note.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Order.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Analysys Report.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Invoice.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Follow-Up Detail.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Follow-Up.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Thank You.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Thank You.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SalesInvoice.xltx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1-servicing-27114-05" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf" Version="18.2.4-ctp" />
+    <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="DXSplashScreen\SplashScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Filtering\View\CustomFilterView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\Shared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\AboutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\CitiesMapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Customer\CustomerAnalysis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Customer\CustomerCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Customer\CustomerPanelView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\DevAVDbView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Employee\EmployeeAssignView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Employee\EmployeeCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Employee\EmployeeMailMergeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Employee\EmployeeMapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Employee\EmployeePanelView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Employee\EmployeeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\MailMergeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\NavigatorMapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderDocQuickReportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderMailMergeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderMapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderRevenueReportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Order\OrderXlsQuickReportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\PeekCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Product\ProductAnalysis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Product\ProductCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+      copy /Y "$(SolutionDir)..\Data\devav.sqlite3" "$(SolutionDir)..\Bin\devav.sqlite3"
+      copy /Y "$(SolutionDir)..\Data\EnglishAlphabet.txt" "$(SolutionDir)..\Bin\EnglishAlphabet.txt"
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
