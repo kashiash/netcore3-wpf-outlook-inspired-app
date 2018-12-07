@@ -262,19 +262,6 @@
     <Page Update="Views\ReportDesignerView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-
-    
-      <Compile Update="MainWindow.xaml.cs">
-        <DependentUpon>MainWindow.xaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-    
-
-    
-      <Page Update="MainWindow.xaml">
-        <Generator>MSBuild:Compile</Generator>
-      </Page>
-    
   </ItemGroup>
 
 </Project>
