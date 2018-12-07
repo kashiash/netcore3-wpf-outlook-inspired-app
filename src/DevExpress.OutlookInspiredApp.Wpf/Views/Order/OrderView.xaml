@@ -75,48 +75,48 @@
                     <dxr:RibbonPage Caption="Home">
                         <dxr:RibbonPageGroup Caption="Save">
                             <dxb:BarButtonItem Content="Save" Command="{Binding SaveCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Save.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Save.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Save.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Save.svg'}" />
                             <dxb:BarButtonItem Content="Save &amp; Close" Command="{Binding SaveAndCloseCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SaveAndClose.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SaveAndClose.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/SaveAndClose.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/SaveAndClose.svg'}" />
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Close">
                             <dxb:BarButtonItem Content="Close" Command="{Binding CloseCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Close.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Close.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Close.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Close.svg'}" />
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup>
                             <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" />
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Actions" IsEnabled="{Binding Entity.Id, Converter={dxmvvm:NumericToBooleanConverter}}" >
                             <dxb:BarButtonItem Content="Quick Print" Command="{Binding Path=FileQuickPrint, Mode=OneTime, Source={StaticResource commands}}"                                      
-                                               LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintQuick.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintQuick.svg'}"/>
+                                               LargeGlyph="{dx:SvgImageSource Uri='/Resources/PrintQuick.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/PrintQuick.svg'}"/>
                             <dxb:BarButtonItem Content="Print" Command="{Binding Path=FilePrint, Mode=OneTime, Source={StaticResource commands}}"
-                                               LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}"/>
+                                               LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}"/>
                             <dxb:BarButtonItem Content="Print Preview"
                                                Command="{Binding Path=FilePrintPreview, Mode=OneTime, Source={StaticResource commands}}"
-                                               LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintPreview.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintPreview.svg'}"/>
+                                               LargeGlyph="{dx:SvgImageSource Uri='/Resources/PrintPreview.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/PrintPreview.svg'}"/>
                             <dxb:BarItemSeparator/>
                             <dxb:BarButtonItem Content="Reset Changes" Command="{Binding ResetAllCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ResetChanges.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ResetChanges.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/ResetChanges.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/ResetChanges.svg'}" />
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="DevExpress">
                             <dxb:BarButtonItem Content="Getting Started" RibbonStyle="Large" Command="{Binding LinksViewModel.GettingStartedCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/GettingStarted.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/GettingStarted.svg'}"/>
+                                Glyph="{dx:SvgImageSource Uri='/Resources/GettingStarted.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/GettingStarted.svg'}"/>
                             <dxb:BarButtonItem Content="Get Free Support" RibbonStyle="Large" Command="{Binding LinksViewModel.GetFreeSupportCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Support.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Support.svg'}"/>
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Support.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Support.svg'}"/>
                             <dxb:BarButtonItem Content="Buy Now" RibbonStyle="Large" Command="{Binding LinksViewModel.BuyNowCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buy.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buy.svg'}"/>
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"/>
                             <dxb:BarButtonItem Content="About" RibbonStyle="Large" Command="{Binding LinksViewModel.AboutCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/About.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/About.svg'}"/>
+                                Glyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"/>
                         </dxr:RibbonPageGroup>
                     </dxr:RibbonPage>
                 </dxr:RibbonDefaultPageCategory>

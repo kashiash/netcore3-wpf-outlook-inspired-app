@@ -28,17 +28,17 @@
             </ResourceDictionary.MergedDictionaries>
             <local:PictureConverter x:Key="PictureConverter" />
             <dxmvvm:ObjectToObjectConverter x:Key="PriorityToPictureConverter">
-                <dxmvvm:MapItem Source="Low" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/LowPriority.svg'}"/>
-                <dxmvvm:MapItem Source="Normal" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/NormalPriority.svg'}"/>
-                <dxmvvm:MapItem Source="High" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/MediumPriority.svg'}"/>
-                <dxmvvm:MapItem Source="Urgent" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/HighPriority.svg'}"/>
+                <dxmvvm:MapItem Source="Low" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/LowPriority.svg'}"/>
+                <dxmvvm:MapItem Source="Normal" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/NormalPriority.svg'}"/>
+                <dxmvvm:MapItem Source="High" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/MediumPriority.svg'}"/>
+                <dxmvvm:MapItem Source="Urgent" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/HighPriority.svg'}"/>
             </dxmvvm:ObjectToObjectConverter>
             <dxmvvm:ObjectToObjectConverter x:Key="StatusToPictureConverter">
-                <dxmvvm:MapItem Source="Not Started" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NotStarted.svg'}"/>
-                <dxmvvm:MapItem Source="Completed" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Completed.svg'}"/>
-                <dxmvvm:MapItem Source="In Progress" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/InProgress.svg'}"/>
-                <dxmvvm:MapItem Source="Need Assistance" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NeedAssistance.svg'}"/>
-                <dxmvvm:MapItem Source="Deferred" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Deferred.svg'}"/>
+                <dxmvvm:MapItem Source="Not Started" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NotStarted.svg'}"/>
+                <dxmvvm:MapItem Source="Completed" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Completed.svg'}"/>
+                <dxmvvm:MapItem Source="In Progress" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/InProgress.svg'}"/>
+                <dxmvvm:MapItem Source="Need Assistance" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NeedAssistance.svg'}"/>
+                <dxmvvm:MapItem Source="Deferred" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Deferred.svg'}"/>
             </dxmvvm:ObjectToObjectConverter>
             <dxmvvm:ObjectToObjectConverter x:Key="HighPriorityConverter" DefaultTarget="False" DefaultSource="Normal">
                 <dxmvvm:MapItem Source="High" Target="True"/>
@@ -121,38 +121,38 @@
                 <dxr:RibbonPage Caption="Home" IsSelected="True">
                     <dxr:RibbonPageGroup Caption="Save">
                         <dxb:BarButtonItem Content="Save" Command="{Binding SaveCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Save.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Save.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Save.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Save.svg'}" />
                         <dxb:BarButtonItem Content="Save &amp; Close" Command="{Binding SaveAndCloseCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SaveAndClose.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SaveAndClose.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/SaveAndClose.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/SaveAndClose.svg'}" />
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Close">
                         <dxb:BarButtonItem Content="Close" Command="{Binding CloseCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Close.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Close.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Close.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Close.svg'}" />
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem Content="Reset Changes" Command="{Binding ResetCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ResetChanges.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ResetChanges.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/ResetChanges.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/ResetChanges.svg'}" />
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}"
-                                Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"
-                                LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}" />
+                                Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"
+                                LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" />
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Actions">
-                        <dxb:BarButtonItem Content="Print" Command="{Binding PrintTaskDetailCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}"/>
-                        <dxb:BarButtonItem Content="Mark Complete" Command="{Binding MarkCompleteCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/MarkComplete.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/MarkComplete.svg'}"/>
-                        <dxb:BarButtonItem Content="Attach File" Command="{Binding AttachFilesCommand}" CommandParameter="{x:Null}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}"/>
+                        <dxb:BarButtonItem Content="Print" Command="{Binding PrintTaskDetailCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}"/>
+                        <dxb:BarButtonItem Content="Mark Complete" Command="{Binding MarkCompleteCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/MarkComplete.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/MarkComplete.svg'}"/>
+                        <dxb:BarButtonItem Content="Attach File" Command="{Binding AttachFilesCommand}" CommandParameter="{x:Null}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/AttachFile.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/AttachFile.svg'}"/>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Tags">
                         <dxb:BarSplitButtonItem Content="Categorize" ActAsDropDown="True" RibbonStyle="Large">
                             <dxb:BarSplitButtonItem.GlyphTemplate>
                                 <DataTemplate>
                                     <Canvas Name="canvas" Width="16" Height="16">
-                                        <dx:DXImage Name="image" Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Categorize.svg'}"/>
+                                        <dx:DXImage Name="image" Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Categorize.svg'}"/>
                                         <Border Name="border" Width="14" Height="2" Canvas.Left="1" Canvas.Top="14">
                                             <Border.Background>
                                                 <SolidColorBrush Color="{Binding Entity.Category, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ColorConverter}}"/>
@@ -163,7 +163,7 @@
                                         <DataTrigger Binding="{Binding Path=CurrentRibbonStyle, RelativeSource={RelativeSource AncestorType={x:Type dxb:IBarItemLinkControl}}}" Value="Large">
                                             <Setter TargetName="canvas" Property="Width" Value="32"/>
                                             <Setter TargetName="canvas" Property="Height" Value="32"/>
-                                            <Setter TargetName="image" Property="Source" Value="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Categorize.svg'}"/>
+                                            <Setter TargetName="image" Property="Source" Value="{dx:SvgImageSource Uri='/Resources/Categorize.svg'}"/>
                                             <Setter TargetName="border" Property="Width" Value="30"/>
                                             <Setter TargetName="border" Property="Height" Value="4"/>
                                             <Setter TargetName="border" Property="Canvas.Left" Value="1"/>
@@ -178,31 +178,31 @@
                                 </dxb:PopupControlContainer>
                             </dxb:BarSplitButtonItem.PopupControl>
                         </dxb:BarSplitButtonItem>
-                        <dxb:BarSubItem Content="Follow Up" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/FollowUp.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/FollowUp.svg'}">
-                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpTodayConverter}, Mode=TwoWay}" Content="Today" Command="{Binding FollowUpCommand}" CommandParameter="Today" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Today.svg'}"/>
-                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpTomorrowConverter}, Mode=TwoWay}" Content="Tomorrow" Command="{Binding FollowUpCommand}" CommandParameter="Tomorrow" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Tomorrow.svg'}"/>
-                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpThisWeekConverter}, Mode=TwoWay}" Content="This Week" Command="{Binding FollowUpCommand}" CommandParameter="ThisWeek" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/ThisWeek.svg'}"/>
-                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpNextWeekConverter}, Mode=TwoWay}" Content="Next Week" Command="{Binding FollowUpCommand}" CommandParameter="NextWeek" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NextWeek.svg'}"/>
-                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpNoDateConverter}, Mode=TwoWay}" Content="No Date" Command="{Binding FollowUpCommand}" CommandParameter="NoDate" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NoDate.svg'}"/>
-                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpCustomConverter}, Mode=TwoWay}" Content="Custom" Command="{Binding FollowUpCommand}" CommandParameter="Custom" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Custom.svg'}"/>
+                        <dxb:BarSubItem Content="Follow Up" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Tasks/FollowUp.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Tasks/FollowUp.svg'}">
+                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpTodayConverter}, Mode=TwoWay}" Content="Today" Command="{Binding FollowUpCommand}" CommandParameter="Today" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Today.svg'}"/>
+                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpTomorrowConverter}, Mode=TwoWay}" Content="Tomorrow" Command="{Binding FollowUpCommand}" CommandParameter="Tomorrow" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Tomorrow.svg'}"/>
+                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpThisWeekConverter}, Mode=TwoWay}" Content="This Week" Command="{Binding FollowUpCommand}" CommandParameter="ThisWeek" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/ThisWeek.svg'}"/>
+                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpNextWeekConverter}, Mode=TwoWay}" Content="Next Week" Command="{Binding FollowUpCommand}" CommandParameter="NextWeek" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NextWeek.svg'}"/>
+                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpNoDateConverter}, Mode=TwoWay}" Content="No Date" Command="{Binding FollowUpCommand}" CommandParameter="NoDate" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NoDate.svg'}"/>
+                            <dxb:BarCheckItem IsChecked="{Binding Entity.FollowUp, Converter={StaticResource FollowUpCustomConverter}, Mode=TwoWay}" Content="Custom" Command="{Binding FollowUpCommand}" CommandParameter="Custom" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Custom.svg'}"/>
                         </dxb:BarSubItem>
-                        <dxb:BarCheckItem Content="Private" IsChecked="{Binding Entity.Private, Mode=TwoWay}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Private.svg'}"/>
-                        <dxb:BarCheckItem Content="High Importance" IsChecked="{Binding ElementName=PriorityEditor, Path=EditValue, Mode=TwoWay, Converter={StaticResource HighPriorityConverter}}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/HighImportance.svg'}"/>
-                        <dxb:BarCheckItem Content="Low Importance" IsChecked="{Binding ElementName=PriorityEditor, Path=EditValue, Mode=TwoWay, Converter={StaticResource LowPriorityConverter}}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/LowImportance.svg'}"/>
+                        <dxb:BarCheckItem Content="Private" IsChecked="{Binding Entity.Private, Mode=TwoWay}" Glyph="{dx:SvgImageSource Uri='/Resources/Private.svg'}"/>
+                        <dxb:BarCheckItem Content="High Importance" IsChecked="{Binding ElementName=PriorityEditor, Path=EditValue, Mode=TwoWay, Converter={StaticResource HighPriorityConverter}}" Glyph="{dx:SvgImageSource Uri='/Resources/HighImportance.svg'}"/>
+                        <dxb:BarCheckItem Content="Low Importance" IsChecked="{Binding ElementName=PriorityEditor, Path=EditValue, Mode=TwoWay, Converter={StaticResource LowPriorityConverter}}" Glyph="{dx:SvgImageSource Uri='/Resources/LowImportance.svg'}"/>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="DevExpress">
                         <dxb:BarButtonItem Content="Getting Started" RibbonStyle="Large" Command="{Binding LinksViewModel.GettingStartedCommand}"
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/GettingStarted.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/GettingStarted.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/GettingStarted.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/GettingStarted.svg'}"/>
                         <dxb:BarButtonItem Content="Get Free Support" RibbonStyle="Large" Command="{Binding LinksViewModel.GetFreeSupportCommand}"
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Support.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Support.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/Support.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/Support.svg'}"/>
                         <dxb:BarButtonItem Content="Buy Now" RibbonStyle="Large" Command="{Binding LinksViewModel.BuyNowCommand}"
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buy.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buy.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"/>
                         <dxb:BarButtonItem Content="About" RibbonStyle="Large" Command="{Binding LinksViewModel.AboutCommand}"
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/About.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/About.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             </dxr:RibbonDefaultPageCategory>
@@ -330,12 +330,12 @@
                                 <ContextMenu>
                                     <MenuItem Header="Insert File..." Command="{Binding AttachFilesCommand}" CommandParameter="{x:Null}">
                                         <MenuItem.Icon>
-                                            <dx:DXImage Stretch="None" Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AddFile.svg'}"/>
+                                            <dx:DXImage Stretch="None" Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/AddFile.svg'}"/>
                                         </MenuItem.Icon>
                                     </MenuItem>
                                     <MenuItem  Header="Delete File" Command="{Binding DeleteFileCommand}">
                                         <MenuItem.Icon>
-                                            <dx:DXImage Stretch="None" Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"/>
+                                            <dx:DXImage Stretch="None" Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Delete.svg'}"/>
                                         </MenuItem.Icon>
                                     </MenuItem>
                                 </ContextMenu>

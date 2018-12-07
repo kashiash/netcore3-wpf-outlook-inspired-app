@@ -4,7 +4,7 @@
     xmlns:view="clr-namespace:DevExpress.DevAV.Views"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     WindowStartupLocation="CenterScreen"
-    UseLayoutRounding="True" 
+    UseLayoutRounding="True" ShowIcon="True"
     Loaded="MainWindowLoaded" dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
     Title="DevAV"
     Width="1377" Height="727">

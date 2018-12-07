@@ -77,32 +77,32 @@
                     <dxr:RibbonPage Caption="Home">
                         <dxr:RibbonPageGroup Caption="Save">
                             <dxb:BarButtonItem Content="Close" Command="{Binding CloseCommand}"
-                                    LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Close.svg'}"
-                                    Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Close.svg'}" />
+                                    LargeGlyph="{dx:SvgImageSource Uri='/Resources/Close.svg'}"
+                                    Glyph="{dx:SvgImageSource Uri='/Resources/Close.svg'}" />
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup>
                             <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}"
-                                    LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"
-                                    Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}" />
+                                    LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"
+                                    Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" />
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Options">
-                            <dxb:BarButtonItem Command="{Binding StatisticsViewModel.ThisMonthFilterCommand}" Content="This Month" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesPeriodMonth.svg'}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesPeriodMonth.svg'}"/>
-                            <dxb:BarButtonItem Command="{Binding StatisticsViewModel.YTDFilterCommand}" Content="This Year" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesPeriodYear.svg'}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesPeriodYear.svg'}"/>
-                            <dxb:BarButtonItem Command="{Binding StatisticsViewModel.LifetimeFilterCommand}" Content="Lifetime" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesPeriodLifetime.svg'}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesPeriodLifetime.svg'}"/>
+                            <dxb:BarButtonItem Command="{Binding StatisticsViewModel.ThisMonthFilterCommand}" Content="This Month" Glyph="{dx:SvgImageSource Uri='/Resources/SalesPeriodMonth.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesPeriodMonth.svg'}"/>
+                            <dxb:BarButtonItem Command="{Binding StatisticsViewModel.YTDFilterCommand}" Content="This Year" Glyph="{dx:SvgImageSource Uri='/Resources/SalesPeriodYear.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesPeriodYear.svg'}"/>
+                            <dxb:BarButtonItem Command="{Binding StatisticsViewModel.LifetimeFilterCommand}" Content="Lifetime" Glyph="{dx:SvgImageSource Uri='/Resources/SalesPeriodLifetime.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesPeriodLifetime.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="DevExpress">
                             <dxb:BarButtonItem x:Name="GettingStartedBarButtonItem" Content="Getting Started" RibbonStyle="Large" Command="{Binding CitiesMapViewModel.LinksViewModel.GettingStartedCommand}" 
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/GettingStarted.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/GettingStarted.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/GettingStarted.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/GettingStarted.svg'}"/>
                             <dxb:BarButtonItem x:Name="GetSupportBarButtonItem" Content="Get Free Support" RibbonStyle="Large" Command="{Binding CitiesMapViewModel.LinksViewModel.GetFreeSupportCommand}"
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Support.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Support.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/Support.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/Support.svg'}"/>
                             <dxb:BarButtonItem x:Name="BuyNowBarButtonItem" Content="Buy Now" RibbonStyle="Large" Command="{Binding CitiesMapViewModel.LinksViewModel.BuyNowCommand}"
-                                     Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buy.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buy.svg'}"/>
+                                     Glyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"/>
                             <dxb:BarButtonItem x:Name="AboutBarButtonItem" Content="About" RibbonStyle="Large" Command="{Binding CitiesMapViewModel.LinksViewModel.AboutCommand}"
-                                        Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/About.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/About.svg'}"/>
+                                        Glyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"/>
                         </dxr:RibbonPageGroup>
                     </dxr:RibbonPage>
                 </dxr:RibbonDefaultPageCategory>

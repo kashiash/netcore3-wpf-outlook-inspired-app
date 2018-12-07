@@ -71,87 +71,87 @@
                     <dxr:RibbonPage Caption="Home">
                         <dxr:RibbonPageGroup>
                             <dxb:BarButtonItem Content="New Product" Command="{Binding NewCommand}"
-                                   LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewProduct.svg'}"
-                                   Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewProduct.svg'}"/>
+                                   LargeGlyph="{dx:SvgImageSource Uri='/Resources/NewProduct.svg'}"
+                                   Glyph="{dx:SvgImageSource Uri='/Resources/NewProduct.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup>
-                            <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"/>
+                            <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Actions">
-                            <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}"/>
-                            <dxb:BarSubItem Content="Print" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}">
-                                <dxb:BarButtonItem Content="Order Detail" Command="{Binding PrintOrderDetailCommand}" Glyph="{dx:SvgImageSource  Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintItems/ProductOrderDetail.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintItems/ProductOrderDetail.svg'}"/>
-                                <dxb:BarButtonItem Content="Sales Summary" Command="{Binding PrintSalesSummaryCommand}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesSummary2.svg'}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesSummary2.svg'}"/>
-                                <dxb:BarButtonItem Content="Specification Summary" Command="{Binding PrintSpecificationSummaryCommand}" Glyph="{dx:SvgImageSource  Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintItems/ProductSpecificationsSummary.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintItems/ProductSpecificationsSummary.svg'}"/>
+                            <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
+                            <dxb:BarSubItem Content="Print" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}">
+                                <dxb:BarButtonItem Content="Order Detail" Command="{Binding PrintOrderDetailCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductOrderDetail.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductOrderDetail.svg'}"/>
+                                <dxb:BarButtonItem Content="Sales Summary" Command="{Binding PrintSalesSummaryCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesSummary2.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesSummary2.svg'}"/>
+                                <dxb:BarButtonItem Content="Specification Summary" Command="{Binding PrintSpecificationSummaryCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductSpecificationsSummary.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductSpecificationsSummary.svg'}"/>
                             </dxb:BarSubItem>
-                            <dxb:BarButtonItem Content="Sales Analysis" Command="{Binding ShowAnalysisCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/CostAnalysis.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/CostAnalysis.svg'}"/>
+                            <dxb:BarButtonItem Content="Sales Analysis" Command="{Binding ShowAnalysisCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/CostAnalysis.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/CostAnalysis.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Quick Reports">
-                            <dxr:RibbonGalleryBarItem Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesInvoise2.svg'}" Content="Quick Reports">
+                            <dxr:RibbonGalleryBarItem Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/SalesInvoise2.svg'}" Content="Quick Reports">
                                 <dxr:RibbonGalleryBarItem.Gallery>
                                     <dxb:Gallery MinColCount="2" ColCount="2" ItemGlyphSize="16,16" IsItemDescriptionVisible="False" IsItemCaptionVisible="True" IsGroupCaptionVisible="False" AllowFilter="False" SizeMode="None">
                                         <dxb:GalleryItemGroup>
-                                            <dxb:GalleryItem Caption="Sales Report" Command="{Binding PrintOrderDetailCommand}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SalesInvoise2.svg'}"/>
-                                            <dxb:GalleryItem Caption="Shipments" Command="{Binding PrintSalesSummaryCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Quickitems/ProductQuickShipments.svg'}"/>
-                                            <dxb:GalleryItem Caption="Comparisons" Command="{Binding PrintSpecificationSummaryCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Quickitems/ProductQuickComparisons.svg'}"/>
-                                            <dxb:GalleryItem Caption="Top Salesperson" Command="{Binding PrintTopSalespersonCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Quickitems/ProductQuickTopSalesperson.svg'}"/>
+                                            <dxb:GalleryItem Caption="Sales Report" Command="{Binding PrintOrderDetailCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
+                                            <dxb:GalleryItem Caption="Shipments" Command="{Binding PrintSalesSummaryCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Quickitems/ProductQuickShipments.svg'}"/>
+                                            <dxb:GalleryItem Caption="Comparisons" Command="{Binding PrintSpecificationSummaryCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Quickitems/ProductQuickComparisons.svg'}"/>
+                                            <dxb:GalleryItem Caption="Top Salesperson" Command="{Binding PrintTopSalespersonCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Quickitems/ProductQuickTopSalesperson.svg'}"/>
                                         </dxb:GalleryItemGroup>
                                     </dxb:Gallery>
                                 </dxr:RibbonGalleryBarItem.Gallery>
                             </dxr:RibbonGalleryBarItem>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="View">
-                            <dxb:BarCheckItem Content="List" GroupIndex="65" Command="{Binding ViewSettings.ShowListCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/List.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/List.svg'}"/>
-                            <dxb:BarCheckItem Content="Card" GroupIndex="65" Command="{Binding ViewSettings.ShowCardCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Card.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Card.svg'}"/>
-                            <dxb:BarButtonItem Content="Sales Map" Command="{Binding ShowMapCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Mapit.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Mapit.svg'}"/>
+                            <dxb:BarCheckItem Content="List" GroupIndex="65" Command="{Binding ViewSettings.ShowListCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/List.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/List.svg'}"/>
+                            <dxb:BarCheckItem Content="Card" GroupIndex="65" Command="{Binding ViewSettings.ShowCardCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Card.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Card.svg'}"/>
+                            <dxb:BarButtonItem Content="Sales Map" Command="{Binding ShowMapCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Mapit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Mapit.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Find">
-                            <dxb:BarButtonItem Content="Custom Filter" Command="{Binding CreateCustomFilterCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Filter.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Filter.svg'}"/>
+                            <dxb:BarButtonItem Content="Custom Filter" Command="{Binding CreateCustomFilterCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Filter.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Filter.svg'}"/>
                         </dxr:RibbonPageGroup>
                     </dxr:RibbonPage>
                     <dxr:RibbonPage Caption="View">
                         <dxr:RibbonPageGroup Caption="Current View" MergeOrder="0">
-                            <dxb:BarSubItem Content="Change View" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ChangeView.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ChangeView.svg'}">
+                            <dxb:BarSubItem Content="Change View" LargeGlyph="{dx:SvgImageSource Uri='/Resources/ChangeView.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/ChangeView.svg'}">
                                 <dxb:BarCheckItem Content="List" GroupIndex="66" IsChecked="{Binding ViewSettings.ViewKind, Converter={StaticResource ListViewToTrueConverter}}"
                                             Command="{Binding ViewSettings.ShowListCommand}"
-                                            Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/List.svg'}"
-                                            LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/List.svg'}"/>
+                                            Glyph="{dx:SvgImageSource Uri='/Resources/List.svg'}"
+                                            LargeGlyph="{dx:SvgImageSource Uri='/Resources/List.svg'}"/>
                                 <dxb:BarCheckItem Content="Card" GroupIndex="66" IsChecked="{Binding ViewSettings.ViewKind, Converter={StaticResource CardViewToTrueConverter}}"
                                             Command="{Binding ViewSettings.ShowCardCommand}"
-                                            Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Card.svg'}"
-                                            LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Card.svg'}"/>
+                                            Glyph="{dx:SvgImageSource Uri='/Resources/Card.svg'}"
+                                            LargeGlyph="{dx:SvgImageSource Uri='/Resources/Card.svg'}"/>
                             </dxb:BarSubItem>
-                            <dxb:BarButtonItem Content="Reset View" Command="{Binding ViewSettings.ResetViewCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ResetView.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ResetView.svg'}"/>
+                            <dxb:BarButtonItem Content="Reset View" Command="{Binding ViewSettings.ResetViewCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/ResetView.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/ResetView.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Layout" MergeOrder="1">
-                            <dxb:BarSubItem x:Name="DataPaneBarSubItem" Content="Data Pane" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/DataPanel.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/DataPanel.svg'}">
+                            <dxb:BarSubItem x:Name="DataPaneBarSubItem" Content="Data Pane" LargeGlyph="{dx:SvgImageSource Uri='/Resources/DataPanel.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/DataPanel.svg'}">
                                 <dxb:BarCheckItem x:Name="HorizontalViewBarCheckItem" GroupIndex="67" Content="Right" RibbonStyle="SmallWithText"
                                             Command="{Binding ViewSettings.DataPaneRightCommand}"
-                                            Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PanelRight.svg'}"
-                                            LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PanelRight.svg'}"
+                                            Glyph="{dx:SvgImageSource Uri='/Resources/PanelRight.svg'}"
+                                            LargeGlyph="{dx:SvgImageSource Uri='/Resources/PanelRight.svg'}"
                                             IsChecked="{Binding ViewSettings.Orientation, Converter={StaticResource OrientationToIsHorizontalConverter}}"/>
                                 <dxb:BarCheckItem x:Name="VerticalViewBarCheckItem" GroupIndex="67" Content="Bottom" RibbonStyle="SmallWithText"
                                             Command="{Binding ViewSettings.DataPaneLeftCommand}"
-                                            Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PanelBottom.svg'}"
-                                            LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PanelBottom.svg'}"
+                                            Glyph="{dx:SvgImageSource Uri='/Resources/PanelBottom.svg'}"
+                                            LargeGlyph="{dx:SvgImageSource Uri='/Resources/PanelBottom.svg'}"
                                             IsChecked="{Binding ViewSettings.Orientation, Converter={StaticResource OrientationToIsVerticalConverter}}"/>
                                 <dxb:BarCheckItem x:Name="IsDataPaneVisibleBarCheckItem" GroupIndex="67" Content="Off"
                                             Command="{Binding ViewSettings.DataPaneOffCommand}"
                                             IsChecked="{Binding ViewSettings.IsDataPaneVisible, Converter={dxmvvm:BooleanNegationConverter}}"
-                                            Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PanelOff.svg'}" RibbonStyle="SmallWithText"
-                                            LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PanelOff.svg'}"/>
+                                            Glyph="{dx:SvgImageSource Uri='/Resources/PanelOff.svg'}" RibbonStyle="SmallWithText"
+                                            LargeGlyph="{dx:SvgImageSource Uri='/Resources/PanelOff.svg'}"/>
                             </dxb:BarSubItem>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup MergeOrder="2" Caption="Data">
-                            <dxb:BarButtonItem Content="Reverse Sort" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ReversSort.svg'}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ReversSort.svg'}" RibbonStyle="SmallWithText">
+                            <dxb:BarButtonItem Content="Reverse Sort" Glyph="{dx:SvgImageSource Uri='/Resources/ReversSort.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/ReversSort.svg'}" RibbonStyle="SmallWithText">
                                 <dxmvvm:Interaction.Behaviors>
                                     <dxmvvm:EventToCommand EventName="ItemClick" Command="{Binding ElementName=tableViewGridControl, Path=View.Commands.ChangeColumnsSortOrder}" />
                                     <dxmvvm:EventToCommand EventName="ItemClick" Command="{Binding ElementName=cardViewGridControl, Path=View.Commands.ChangeColumnsSortOrder}" />
                                 </dxmvvm:Interaction.Behaviors>
                             </dxb:BarButtonItem>
-                            <dxb:BarButtonItem Content="Add Columns" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AddColumn.svg'}" IsEnabled="{Binding ViewSettings.ViewKind, Converter={StaticResource CollectionViewKindToBooleanConverter}}"
+                            <dxb:BarButtonItem Content="Add Columns" Glyph="{dx:SvgImageSource Uri='/Resources/AddColumn.svg'}" IsEnabled="{Binding ViewSettings.ViewKind, Converter={StaticResource CollectionViewKindToBooleanConverter}}"
                                                    Command="{Binding ElementName=tableViewGridControl, Path=View.Commands.ShowColumnChooser}" />
-                            <dxb:BarSubItem Content="Expand/Collapse" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ExpandCollapse.svg'}" IsEnabled="{Binding ViewSettings.ViewKind, Converter={StaticResource CollectionViewKindToBooleanConverter}}">
+                            <dxb:BarSubItem Content="Expand/Collapse" Glyph="{dx:SvgImageSource Uri='/Resources/ExpandCollapse.svg'}" IsEnabled="{Binding ViewSettings.ViewKind, Converter={StaticResource CollectionViewKindToBooleanConverter}}">
                                 <dxb:BarButtonItem Content="Collapse All Groups" Command="{Binding ElementName=tableViewGridControl, Path=View.GridViewCommands.CollapseAllGroups}"/>
                                 <dxb:BarButtonItem Content="Expand All Groups" Command="{Binding ElementName=tableViewGridControl, Path=View.GridViewCommands.ExpandAllGroups}"/>
                             </dxb:BarSubItem>
@@ -195,10 +195,10 @@
                                                     AutoWidth="True" SearchPanelHorizontalAlignment="Right" NavigationStyle="Row" ShowTotalSummary="True"
                                                     HorizontalScrollbarVisibility="Hidden" IsTotalSummaryMenuEnabled="False" SearchPanelNullText="Search Products (Ctrl + F)" ColumnFilterPopupMode="Excel">
                                             <dxg:TableView.RowCellMenuCustomizations>
-                                                <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.NewCommand}"  Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewProduct.svg'}"/>
-                                                <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}"/>
-                                                <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.DeleteCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"/>
-                                                <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ChangeView.svg'}"/>
+                                                <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.NewCommand}"  Glyph="{dx:SvgImageSource Uri='/Resources/NewProduct.svg'}"/>
+                                                <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
+                                                <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.DeleteCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"/>
+                                                <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:SvgImageSource Uri='/Resources/ChangeView.svg'}"/>
                                             </dxg:TableView.RowCellMenuCustomizations>
                                         </dxg:TableView>
                                     </dxg:GridControl.View>

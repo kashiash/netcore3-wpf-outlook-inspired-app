@@ -226,39 +226,39 @@ namespace DevExpress.DevAV.ViewModels {
     }
 
     public enum EmployeeEvaluationsPrintMode {
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintExcludeEvaluations.svg")]
+        [Image("/Resources/PrintExcludeEvaluations.svg")]
         ExcludeEvaluations,
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintIncludeEvaluations.svg")]
+        [Image("/Resources/PrintIncludeEvaluations.svg")]
         IncludeEvaluations,
     }
     public enum CustomerContactsPrintMode {
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintIncludeEvaluations.svg")]
+        [Image("/Resources/PrintIncludeEvaluations.svg")]
         IncludeContacts,
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/PrintExcludeEvaluations.svg")]
+        [Image("/Resources/PrintExcludeEvaluations.svg")]
         ExcludeContacts,
     }
     public enum ProductImagesPrintMode {
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ShowProduct.svg")]
+        [Image("/Resources/ShowProduct.svg")]
         DisplayProductImages,
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/HideProduct.svg")]
+        [Image("/Resources/HideProduct.svg")]
         HideProductImages,
     }
     public enum SortOrderPrintMode {
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SortAsc.svg")]
+        [Image("/Resources/SortAsc.svg")]
         AscendingOrder,
-        [Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SortDesc.svg")]
+        [Image("/Resources/SortDesc.svg")]
         DescencingOrder
     }
     public enum SortByDatePrintMode {
-        [Display(Name = "Sort by Due Date"), Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ShowDueDate.svg")]
+        [Display(Name = "Sort by Due Date"), Image("/Resources/ShowDueDate.svg")]
         SortByDueDate,
-        [Display(Name = "Sort by Start Date"), Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ShowStartDate.svg")]
+        [Display(Name = "Sort by Start Date"), Image("/Resources/ShowStartDate.svg")]
         SortByStartDate
     }
     public enum SortByPrintMode {
-        [Display(Name = "Sort by Order Date"), Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SortByOrderDate.svg")]
+        [Display(Name = "Sort by Order Date"), Image("/Resources/SortByOrderDate.svg")]
         SortByOrderDate,
-        [Display(Name = "Sort by Invoice #"), Image("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/SortByInvoice.svg")]
+        [Display(Name = "Sort by Invoice #"), Image("/Resources/SortByInvoice.svg")]
         SortByInvoice
     }
 }

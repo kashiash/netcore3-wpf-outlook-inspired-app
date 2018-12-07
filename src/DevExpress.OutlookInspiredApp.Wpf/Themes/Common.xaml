@@ -66,11 +66,11 @@
         <dxe:ListBoxEdit ItemTemplate="{StaticResource OutlookInspiredEnumMemberInfoTemplate}" ItemsSource="{dxe:EnumItemsSource AllowImages=False, EnumType=viewModel:ProductImagesPrintMode}" EditValue="{Binding ProductImagesPrintMode}" />
     </DataTemplate>
     <dxmvvm:ObjectToObjectConverter x:Key="personPrefixToImageConverter">
-        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Doctor.svg'}" Source="Dr" />
-        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Mr.svg'}" Source="Mr" />
-        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Ms.svg'}" Source="Ms" />
-        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Miss.svg'}" Source="Miss" />
-        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Mrs.svg'}" Source="Mrs" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Doctor.svg'}" Source="Dr" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Mr.svg'}" Source="Mr" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Ms.svg'}" Source="Ms" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Miss.svg'}" Source="Miss" />
+        <dxmvvm:MapItem Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Mrs.svg'}" Source="Mrs" />
     </dxmvvm:ObjectToObjectConverter>
     <DataTemplate x:Key="fileViewTemplate">
         <Grid Width="80" ToolTip="{Binding Name}">

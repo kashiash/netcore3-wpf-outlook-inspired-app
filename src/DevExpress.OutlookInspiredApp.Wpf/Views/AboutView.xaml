@@ -22,25 +22,25 @@
         <dxlc:LayoutControl Orientation="Vertical" Margin="20" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <dxlc:LayoutGroup Orientation="Vertical" ItemSpace="35" HorizontalAlignment="Stretch">
                 <dxlc:LayoutGroup Orientation="Vertical" HorizontalAlignment="Center" ItemSpace="10" VerticalAlignment="Center">
-                    <Image Source="pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/UISuperHero.png" VerticalAlignment="Center"/>
+                    <Image Source="/Resources/UISuperHero.png" VerticalAlignment="Center"/>
                     <TextBlock Text="Become a UI Superhero" FontFamily="Segoe UI Light" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <TextBlock TextAlignment="Center" Text="And deliver compelling user-experiences on the WPF platform&#x0a;with award-winning DevExpress Controls and Libraries. " FontFamily="Segoe UI Light" FontSize="30" VerticalAlignment="Center"/>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup HorizontalAlignment="Center" ItemSpace="25" VerticalAlignment="Center">
-                    <Button Style="{StaticResource BitmapButton}" Content="pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Overview-Getting-Started-Normal.png"
+                    <Button Style="{StaticResource BitmapButton}" Content="/Resources/Overview-Getting-Started-Normal.png"
                             AutomationProperties.Name="Getting Started" Command="{Binding GettingStartedCommand}"/>
-                    <Button Style="{StaticResource BitmapButton}" Content="pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Overview-Support-Normal.png"
+                    <Button Style="{StaticResource BitmapButton}" Content="/Resources/Overview-Support-Normal.png"
                             AutomationProperties.Name="Free Support" Command="{Binding GetFreeSupportCommand}"/>
-                    <Button Style="{StaticResource BitmapButton}" Content="pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Overview-Buy-Normal.png"
+                    <Button Style="{StaticResource BitmapButton}" Content="/Resources/Overview-Buy-Normal.png"
                             AutomationProperties.Name="Buy Now" Command="{Binding BuyNowCommand}"/>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup VerticalAlignment="Bottom">
                     <dxlc:LayoutItem HorizontalAlignment="Right">
-                        <Image Source="pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Overview-Logo.png"/>
+                        <Image Source="/Resources/Overview-Logo.png"/>
                     </dxlc:LayoutItem>
                 </dxlc:LayoutGroup>
             </dxlc:LayoutGroup>
         </dxlc:LayoutControl>
-        <Image Source="pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Jolt-Logo.png" Grid.Column="1" Margin="18,60"/>
+        <Image Source="/Resources/Jolt-Logo.png" Grid.Column="1" Margin="18,60"/>
     </Grid>
 </UserControl>

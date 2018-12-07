@@ -36,16 +36,22 @@ namespace DevExpress.DevAV.ViewModels {
 
         protected override DevAVDbModuleDescription[] CreateModules() {
             return new DevAVDbModuleDescription[] {
-                new DevAVDbModuleDescription("Employees", "EmployeeCollectionView", TablesGroup, FiltersSettings.GetEmployeesFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Employees)),
-                new DevAVDbModuleDescription("Tasks", "TaskCollectionView", TablesGroup, FiltersSettings.GetTasksFilterTree(this)),
-                new DevAVDbModuleDescription("Customers", "CustomerCollectionView", TablesGroup, FiltersSettings.GetCustomersFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Customers)),
-                new DevAVDbModuleDescription("Products", "ProductCollectionView", TablesGroup, FiltersSettings.GetProductsFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Products)),
-                new DevAVDbModuleDescription("Sales", "OrderCollectionView", TablesGroup, FiltersSettings.GetSalesFilterTree(this)),
-                new DevAVDbModuleDescription("Opportunities", "QuoteCollectionView", TablesGroup, FiltersSettings.GetOpportunitiesFilterTree(this)),
+                // Uncomment for SQLite tests
+                //new DevAVDbModuleDescription("Employees", "EmployeeCollectionView", TablesGroup, FiltersSettings.GetEmployeesFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Employees)),
+                //new DevAVDbModuleDescription("Tasks", "TaskCollectionView", TablesGroup, FiltersSettings.GetTasksFilterTree(this)),
+                //new DevAVDbModuleDescription("Customers", "CustomerCollectionView", TablesGroup, FiltersSettings.GetCustomersFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Customers)),
+                //new DevAVDbModuleDescription("Products", "ProductCollectionView", TablesGroup, FiltersSettings.GetProductsFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Products)),
+                //new DevAVDbModuleDescription("Sales", "OrderCollectionView", TablesGroup, FiltersSettings.GetSalesFilterTree(this)),
+                //new DevAVDbModuleDescription("Opportunities", "QuoteCollectionView", TablesGroup, FiltersSettings.GetOpportunitiesFilterTree(this)),
+                //
             };
         }
         Workspace defaultWorkspace = new Workspace();
         LinksViewModel linksViewModel;
+
+        // Comment for SQLite tests
+        public override DevAVDbModuleDescription DefaultModule { get { return null; } }
+
 
         public override void OnLoaded(DevAVDbModuleDescription module) {
             base.OnLoaded(module);
@@ -62,6 +68,9 @@ namespace DevExpress.DevAV.ViewModels {
         public override bool RestoreLogicalLayout() {
             return false;
         }
+
+        
+
 
         protected override void OnActiveModuleChanged(DevAVDbModuleDescription oldModule) {
             base.OnActiveModuleChanged(oldModule);
@@ -112,25 +121,25 @@ namespace DevExpress.DevAV.ViewModels {
         }
 
         void RegisterJumpList() {
-#if !CLICKONCE
-            IApplicationJumpListService jumpListService = this.GetService<IApplicationJumpListService>();
-            jumpListService.Items.AddOrReplace("Modules", "New Employee", EmployeeIcon, () => { SignleObjectDocumentManagerService.ShowNewEntityDocument<Employee>(this); });
-            jumpListService.Items.AddOrReplace("Modules", "Customers", CustomerIcon, () => { Show(Modules.Where(m => m.DocumentType == "CustomerCollectionView").First()); });
-            jumpListService.Items.AddOrReplace("Modules", "Opportunities", OpportunitiesIcon, () => { Show(Modules.Where(m => m.DocumentType == "QuoteCollectionView").First()); });
-            jumpListService.Apply();
-#endif
+//#if !CLICKONCE
+//            IApplicationJumpListService jumpListService = this.GetService<IApplicationJumpListService>();
+//            jumpListService.Items.AddOrReplace("Modules", "New Employee", null, () => { SignleObjectDocumentManagerService.ShowNewEntityDocument<Employee>(this); });
+//            jumpListService.Items.AddOrReplace("Modules", "Customers", null, () => { Show(Modules.Where(m => m.DocumentType == "CustomerCollectionView").First()); });
+//            jumpListService.Items.AddOrReplace("Modules", "Opportunities", null, () => { Show(Modules.Where(m => m.DocumentType == "QuoteCollectionView").First()); });
+//            jumpListService.Apply();
+//#endif
         }
 
-        ImageSource EmployeeIcon { get { return (ImageSource)new SvgImageSourceExtension() { Uri = new Uri("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewEmploye.svg") }.ProvideValue(null); } }
-        ImageSource CustomerIcon { get { return (ImageSource)new SvgImageSourceExtension() { Uri = new Uri("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewCustomer.svg") }.ProvideValue(null); } }
-        ImageSource OpportunitiesIcon { get { return (ImageSource)new SvgImageSourceExtension() { Uri = new Uri("pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewOpportunities.svg") }.ProvideValue(null); } }
+        //ImageSource EmployeeIcon { get { return (ImageSource)new SvgImageSourceExtension() { Uri = new Uri(@"/Resources/NewEmploye.svg") }.ProvideValue(null); } }
+        //ImageSource CustomerIcon { get { return (ImageSource)new SvgImageSourceExtension() { Uri = new Uri(@"/Resources/NewCustomer.svg") }.ProvideValue(null); } }
+        //ImageSource OpportunitiesIcon { get { return (ImageSource)new SvgImageSourceExtension() { Uri = new Uri(@"/Resources/NewOpportunities.svg") }.ProvideValue(null); } }
     }
 
     public partial class DevAVDbModuleDescription : ModuleDescription<DevAVDbModuleDescription> {
         public DevAVDbModuleDescription(string title, string documentType, string group, IFilterTreeViewModel filterTreeViewModel, Func<DevAVDbModuleDescription, object> peekCollectionViewModelFactory = null)
             : base(title, documentType, group, peekCollectionViewModelFactory) {
-            ImageSource = (ImageSource)new SvgImageSourceExtension() { Uri = new Uri(string.Format(@"pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Modules/{0}.svg", title)), Size = new System.Windows.Size(24, 24) }
-            .ProvideValue(null);
+            //ImageSource = (ImageSource)new SvgImageSourceExtension() { Uri = new Uri(string.Format(@"/Resources/Modules/{0}.svg", title)), Size = new System.Windows.Size(24, 24) }
+            //.ProvideValue(null);
             FilterTreeViewModel = filterTreeViewModel;
         }
 

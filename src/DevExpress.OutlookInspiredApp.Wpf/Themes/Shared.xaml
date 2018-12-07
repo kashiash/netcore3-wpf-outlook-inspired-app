@@ -28,9 +28,9 @@
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
     </Style>
     <dxmvvm:ObjectToObjectConverter x:Key="RibbonStyleToGlyphConverter">
-        <dxmvvm:MapItem Source="Office2010" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/RibbonStyle/Office2010.svg'}"/>
-        <dxmvvm:MapItem Source="OfficeSlim" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/RibbonStyle/OfficeSlim.svg'}"/>
-        <dxmvvm:MapItem Source="TabletOffice" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/RibbonStyle/TabletOffice.svg'}"/>
+        <dxmvvm:MapItem Source="Office2010" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/RibbonStyle/Office2010.svg'}"/>
+        <dxmvvm:MapItem Source="OfficeSlim" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/RibbonStyle/OfficeSlim.svg'}"/>
+        <dxmvvm:MapItem Source="TabletOffice" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/RibbonStyle/TabletOffice.svg'}"/>
     </dxmvvm:ObjectToObjectConverter>
     <dxmvvm:ObjectToObjectConverter x:Key="SettingsToVisibilityConverter" DefaultTarget="Visible">
         <dxmvvm:MapItem Source="{x:Null}" Target="Collapsed" />
@@ -53,11 +53,11 @@
                     <dxb:GalleryControl Name="galleryControl">
                         <dxb:Gallery AllowFilter="False" ItemDescriptionHorizontalAlignment="Left" AutoHideGallery="True" ItemCheckMode="Single" ColCount="1">
                             <dxb:GalleryItemGroup Caption="Classic">
-                                <dxb:GalleryItem Caption="Office Classic" Description="MS Office Classic style Ribbon" IsChecked="{Binding Selector.SelectedRibbonStyle, Mode=TwoWay, Converter={StaticResource objectsEqualityConverter}, ConverterParameter=Office2010}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/RibbonStyle/Office2010.svg'}"/>
+                                <dxb:GalleryItem Caption="Office Classic" Description="MS Office Classic style Ribbon" IsChecked="{Binding Selector.SelectedRibbonStyle, Mode=TwoWay, Converter={StaticResource objectsEqualityConverter}, ConverterParameter=Office2010}" Glyph="{dx:SvgImageSource Uri='/Resources/RibbonStyle/Office2010.svg'}"/>
                             </dxb:GalleryItemGroup>
                             <dxb:GalleryItemGroup Caption="Tablet">
-                                <dxb:GalleryItem Caption="Tablet Office" Description="Emulates the UI found in MS Office for iPad" IsChecked="{Binding Selector.SelectedRibbonStyle, Mode=TwoWay, Converter={StaticResource objectsEqualityConverter}, ConverterParameter=TabletOffice}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/RibbonStyle/TabletOffice.svg'}"/>
-                                <dxb:GalleryItem Caption="Office Slim" Description="MS Office Store inspired Ribbon" IsChecked="{Binding Selector.SelectedRibbonStyle, Mode=TwoWay, Converter={StaticResource objectsEqualityConverter}, ConverterParameter=OfficeSlim}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/RibbonStyle/OfficeSlim.svg'}"/>
+                                <dxb:GalleryItem Caption="Tablet Office" Description="Emulates the UI found in MS Office for iPad" IsChecked="{Binding Selector.SelectedRibbonStyle, Mode=TwoWay, Converter={StaticResource objectsEqualityConverter}, ConverterParameter=TabletOffice}" Glyph="{dx:SvgImageSource Uri='/Resources/RibbonStyle/TabletOffice.svg'}"/>
+                                <dxb:GalleryItem Caption="Office Slim" Description="MS Office Store inspired Ribbon" IsChecked="{Binding Selector.SelectedRibbonStyle, Mode=TwoWay, Converter={StaticResource objectsEqualityConverter}, ConverterParameter=OfficeSlim}" Glyph="{dx:SvgImageSource Uri='/Resources/RibbonStyle/OfficeSlim.svg'}"/>
                             </dxb:GalleryItemGroup>
                         </dxb:Gallery>
                     </dxb:GalleryControl>
@@ -123,7 +123,7 @@
                                         Command="{Binding ElementName=documentViewer,  Path=PrintDirectCommand}"
                                         CommandParameter="{Binding SelectedPrinter.Name, RelativeSource={RelativeSource TemplatedParent}}">
                                             <StackPanel>
-                                                <Image  Source="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}" HorizontalAlignment="Center" Stretch="None"/>
+                                                <Image  Source="{dx:SvgImageSource Uri='/Resources/Print.svg'}" HorizontalAlignment="Center" Stretch="None"/>
                                                 <TextBlock Text="Print" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </Button>
@@ -161,7 +161,7 @@
                                             Command="{Binding ElementName=documentViewer, Path=ExportCommand}"
                                             CommandParameter="{TemplateBinding SelectedFormat}">
                                                     <StackPanel>
-                                                        <dx:DXImage Source="{dx:SvgImageSource Size='40,40', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Controls/Export.svg'}" HorizontalAlignment="Center" Stretch="None"/>
+                                                        <dx:DXImage Source="{dx:SvgImageSource Size='40,40', Uri='/Resources/Controls/Export.svg'}" HorizontalAlignment="Center" Stretch="None"/>
                                                         <TextBlock Text="Export" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </dxe:ButtonInfo>
@@ -188,7 +188,7 @@
                                 <Button HorizontalAlignment="Center" Command="{Binding ElementName=documentViewer, Path=PreviousPageCommand}">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Controls/PagePrevious.svg'}"/>
+                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Controls/PagePrevious.svg'}"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
@@ -198,7 +198,7 @@
                                 <Button HorizontalAlignment="Center" Command="{Binding ElementName=documentViewer, Path=NextPageCommand}">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Controls/PageNext.svg'}"/>
+                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Controls/PageNext.svg'}"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
@@ -216,14 +216,14 @@
                                 <Button HorizontalAlignment="Center" Margin="2" Command="{Binding ElementName=documentViewer, Path=PageSetupCommand}">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Controls/Pages.svg'}"/>
+                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Controls/Pages.svg'}"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
                                 <Button HorizontalAlignment="Center" Margin="2" Command="{Binding ElementName=documentViewer, Path=ScaleCommand}">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Controls/Scale.svg'}"/>
+                                            <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Controls/Scale.svg'}"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>

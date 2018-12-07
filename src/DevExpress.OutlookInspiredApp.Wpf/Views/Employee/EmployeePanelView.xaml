@@ -90,10 +90,10 @@
                         <Setter Property="StrokeThickness" Value="2" />
                     </Style>
                 </StackPanel.Resources>
-                <dxwui:CommandButton Command="{Binding MessageCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buttons/Glyph_Message.svg'}" />
-                <dxwui:CommandButton Command="{Binding PhoneCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buttons/Glyph_Phone.svg'}"/>
-                <dxwui:CommandButton Command="{Binding VideoCallCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buttons/Glyph_Video.svg'}"/>
-                <dxwui:CommandButton Command="{Binding MailToCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Buttons/Glyph_Mail.svg'}"/>
+                <dxwui:CommandButton Command="{Binding MessageCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Buttons/Glyph_Message.svg'}" />
+                <dxwui:CommandButton Command="{Binding PhoneCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Buttons/Glyph_Phone.svg'}"/>
+                <dxwui:CommandButton Command="{Binding VideoCallCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Buttons/Glyph_Video.svg'}"/>
+                <dxwui:CommandButton Command="{Binding MailToCommand}" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Buttons/Glyph_Mail.svg'}"/>
             </StackPanel>
         </Grid>
         <Border Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="#FFC6C6C6" BorderThickness="1" Height="1" Margin="0,10,0,10" />

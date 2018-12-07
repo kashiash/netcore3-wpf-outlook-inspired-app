@@ -63,20 +63,20 @@
         </dxmvvm:ObjectToObjectConverter>
         <local:CategoryColorConverter x:Key="ColorConverter"/>
         <dxmvvm:ObjectToObjectConverter x:Key="PriorityToPictureConverter">
-            <dxmvvm:MapItem Source="Low" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/LowPriority.svg'}"/>
-            <dxmvvm:MapItem Source="Normal" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/NormalPriority.svg'}"/>
-            <dxmvvm:MapItem Source="High" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/MediumPriority.svg'}"/>
-            <dxmvvm:MapItem Source="Urgent" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Priority/HighPriority.svg'}"/>
+            <dxmvvm:MapItem Source="Low" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/LowPriority.svg'}"/>
+            <dxmvvm:MapItem Source="Normal" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/NormalPriority.svg'}"/>
+            <dxmvvm:MapItem Source="High" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/MediumPriority.svg'}"/>
+            <dxmvvm:MapItem Source="Urgent" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/HighPriority.svg'}"/>
         </dxmvvm:ObjectToObjectConverter>
         <dxmvvm:ObjectToObjectConverter x:Key="FollowUpToPictureConverter">
-            <dxmvvm:MapItem Source="Today" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Today.svg'}"/>
-            <dxmvvm:MapItem Source="Tomorrow" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Tomorrow.svg'}"/>
-            <dxmvvm:MapItem Source="ThisWeek" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/ThisWeek.svg'}"/>
-            <dxmvvm:MapItem Source="NextWeek" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NextWeek.svg'}"/>
-            <dxmvvm:MapItem Source="NoDate" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NoDate.svg'}"/>
-            <dxmvvm:MapItem Source="Custom" Target="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Custom.svg'}"/>
+            <dxmvvm:MapItem Source="Today" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Today.svg'}"/>
+            <dxmvvm:MapItem Source="Tomorrow" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Tomorrow.svg'}"/>
+            <dxmvvm:MapItem Source="ThisWeek" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/ThisWeek.svg'}"/>
+            <dxmvvm:MapItem Source="NextWeek" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NextWeek.svg'}"/>
+            <dxmvvm:MapItem Source="NoDate" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NoDate.svg'}"/>
+            <dxmvvm:MapItem Source="Custom" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Custom.svg'}"/>
         </dxmvvm:ObjectToObjectConverter>
-        <dxmvvm:ObjectToObjectConverter x:Key="HasAttachmentConverter" DefaultTarget="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}">
+        <dxmvvm:ObjectToObjectConverter x:Key="HasAttachmentConverter" DefaultTarget="{dx:SvgImageSource Size='16,16', Uri='/Resources/AttachFile.svg'}">
             <dxmvvm:MapItem Source="0" Target="{x:Null}"/>
         </dxmvvm:ObjectToObjectConverter>
         <x:Array Type="{x:Type sys:String}" x:Key="invisibleColumnsHeader">
@@ -116,22 +116,22 @@
                 <dxr:RibbonDefaultPageCategory Caption="defaultCategory">
                     <dxr:RibbonPage Caption="Home">
                         <dxr:RibbonPageGroup Caption="">
-                            <dxb:BarButtonItem Content="New Task" Command="{Binding NewCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewTask.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewTask.svg'}"/>
-                            <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"/>
+                            <dxb:BarButtonItem Content="New Task" Command="{Binding NewCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/NewTask.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/NewTask.svg'}"/>
+                            <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Actions">
-                            <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}"/>
-                            <dxb:BarButtonItem Content="Print" Command="{Binding PrintTasksSummaryCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}"/>
-                            <dxb:BarButtonItem Content="Mark Complete" Command="{Binding MarkCompleteCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/MarkComplete.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/MarkComplete.svg'}"/>
-                            <dxb:BarButtonItem Content="Assign Task" Command="{Binding AssignTaskCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AssignTask.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AssignTask.svg'}"/>
-                            <dxb:BarButtonItem Content="Attach File" Command="{Binding AttachFileCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}"/>
+                            <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
+                            <dxb:BarButtonItem Content="Print" Command="{Binding PrintTasksSummaryCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}"/>
+                            <dxb:BarButtonItem Content="Mark Complete" Command="{Binding MarkCompleteCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/MarkComplete.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/MarkComplete.svg'}"/>
+                            <dxb:BarButtonItem Content="Assign Task" Command="{Binding AssignTaskCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/AssignTask.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/AssignTask.svg'}"/>
+                            <dxb:BarButtonItem Content="Attach File" Command="{Binding AttachFileCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/AttachFile.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/AttachFile.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Tags">
                             <dxb:BarSplitButtonItem Content="Categorize" ActAsDropDown="True" RibbonStyle="Large">
                                 <dxb:BarSplitButtonItem.GlyphTemplate>
                                     <DataTemplate>
                                         <Canvas Name="canvas" Width="16" Height="16">
-                                            <dx:DXImage Name="image" Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Categorize.svg'}"/>
+                                            <dx:DXImage Name="image" Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Categorize.svg'}"/>
                                             <Border Name="border" Width="14" Height="2" Canvas.Left="1" Canvas.Top="14">
                                                 <Border.Background>
                                                     <SolidColorBrush Color="{Binding Category, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ColorConverter}}"/>
@@ -154,7 +154,7 @@
                                             <DataTrigger Binding="{Binding Path=CurrentRibbonStyle, RelativeSource={RelativeSource AncestorType={x:Type dxb:IBarItemLinkControl}}}" Value="Large">
                                                 <Setter TargetName="canvas" Property="Width" Value="32"/>
                                                 <Setter TargetName="canvas" Property="Height" Value="32"/>
-                                                <Setter TargetName="image" Property="Source" Value="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Categorize.svg'}"/>
+                                                <Setter TargetName="image" Property="Source" Value="{dx:SvgImageSource Uri='/Resources/Categorize.svg'}"/>
                                                 <Setter TargetName="border" Property="Width" Value="30"/>
                                                 <Setter TargetName="border" Property="Height" Value="4"/>
                                                 <Setter TargetName="border" Property="Canvas.Left" Value="1"/>
@@ -170,27 +170,27 @@
                                     </dxb:PopupControlContainer>
                                 </dxb:BarSplitButtonItem.PopupControl>
                             </dxb:BarSplitButtonItem>
-                            <dxb:BarCheckItem Content="Private" IsChecked="{Binding Private, Mode=TwoWay}" IsThreeState="True" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Private.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="7" IsChecked="{Binding PrioritySelector[0], Mode=TwoWay}" AllowUncheckInGroup="True" Content="High Importance" Command="{Binding PriorityCommand}" CommandParameter="High" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/HighImportance.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="7" IsChecked="{Binding PrioritySelector[1], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Low Importance" Command="{Binding PriorityCommand}" CommandParameter="Low" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/LowImportance.svg'}"/>
+                            <dxb:BarCheckItem Content="Private" IsChecked="{Binding Private, Mode=TwoWay}" IsThreeState="True" Glyph="{dx:SvgImageSource Uri='/Resources/Private.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="7" IsChecked="{Binding PrioritySelector[0], Mode=TwoWay}" AllowUncheckInGroup="True" Content="High Importance" Command="{Binding PriorityCommand}" CommandParameter="High" Glyph="{dx:SvgImageSource Uri='/Resources/HighImportance.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="7" IsChecked="{Binding PrioritySelector[1], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Low Importance" Command="{Binding PriorityCommand}" CommandParameter="Low" Glyph="{dx:SvgImageSource Uri='/Resources/LowImportance.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Follow Up" >
-                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[0], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Today" Command="{Binding FollowUpCommand}" CommandParameter="Today" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Today.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[1], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Tomorrow" Command="{Binding FollowUpCommand}" CommandParameter="Tomorrow"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Tomorrow.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[2], Mode=TwoWay}" AllowUncheckInGroup="True" Content="This Week" Command="{Binding FollowUpCommand}" CommandParameter="ThisWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/ThisWeek.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[3], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Next Week" Command="{Binding FollowUpCommand}" CommandParameter="NextWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NextWeek.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[4], Mode=TwoWay}" AllowUncheckInGroup="True" Content="No Date" Command="{Binding FollowUpCommand}" CommandParameter="NoDate"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NoDate.svg'}"/>
-                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[5], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Custom" Command="{Binding FollowUpCommand}" CommandParameter="Custom"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Custom.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[0], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Today" Command="{Binding FollowUpCommand}" CommandParameter="Today" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Today.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[1], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Tomorrow" Command="{Binding FollowUpCommand}" CommandParameter="Tomorrow"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Tomorrow.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[2], Mode=TwoWay}" AllowUncheckInGroup="True" Content="This Week" Command="{Binding FollowUpCommand}" CommandParameter="ThisWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/ThisWeek.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[3], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Next Week" Command="{Binding FollowUpCommand}" CommandParameter="NextWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NextWeek.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[4], Mode=TwoWay}" AllowUncheckInGroup="True" Content="No Date" Command="{Binding FollowUpCommand}" CommandParameter="NoDate"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NoDate.svg'}"/>
+                            <dxb:BarCheckItem GroupIndex="8" IsChecked="{Binding FollowUpSelector[5], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Custom" Command="{Binding FollowUpCommand}" CommandParameter="Custom"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Custom.svg'}"/>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Current View">
-                            <dxr:RibbonGalleryBarItem Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/TaskList.svg'}" Content="Current View">
+                            <dxr:RibbonGalleryBarItem Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/TaskList.svg'}" Content="Current View">
                                 <dxr:RibbonGalleryBarItem.Gallery>
                                     <dxb:Gallery ItemCaptionHorizontalAlignment="Center" ItemGlyphLocation="Top" ItemGlyphSize="32,32" ItemAutoHeight="True" IsItemDescriptionVisible="False" IsItemCaptionVisible="True" IsGroupCaptionVisible="False" AllowFilter="False" SizeMode="None">
                                         <dxb:GalleryItemGroup>
-                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource SimpleListViewConverter}}" Caption="Simple List"  Command="{Binding ChangeTaskViewCommand}" CommandParameter="SimpleList" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/TaskList.svg'}" />
-                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource DetailedViewConverter}}" Caption="Detailed" Command="{Binding ChangeTaskViewCommand}" CommandParameter="Detailed" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/DetailView.svg'}"/>
-                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource PrioritizedViewConverter}}" Caption="Prioritized" Command="{Binding ChangeTaskViewCommand}" CommandParameter="Prioritized" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Prioritized.svg'}"/>
-                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource ActiveViewConverter}}" Caption="Active" Command="{Binding ChangeTaskViewCommand}" CommandParameter="Active" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Active.svg'}"/>
+                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource SimpleListViewConverter}}" Caption="Simple List"  Command="{Binding ChangeTaskViewCommand}" CommandParameter="SimpleList" Glyph="{dx:SvgImageSource Uri='/Resources/TaskList.svg'}" />
+                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource DetailedViewConverter}}" Caption="Detailed" Command="{Binding ChangeTaskViewCommand}" CommandParameter="Detailed" Glyph="{dx:SvgImageSource Uri='/Resources/DetailView.svg'}"/>
+                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource PrioritizedViewConverter}}" Caption="Prioritized" Command="{Binding ChangeTaskViewCommand}" CommandParameter="Prioritized" Glyph="{dx:SvgImageSource Uri='/Resources/Prioritized.svg'}"/>
+                                            <dxb:GalleryItem IsChecked="{Binding ViewKind, Converter={StaticResource ActiveViewConverter}}" Caption="Active" Command="{Binding ChangeTaskViewCommand}" CommandParameter="Active" Glyph="{dx:SvgImageSource Uri='/Resources/Active.svg'}"/>
                                         </dxb:GalleryItemGroup>
                                     </dxb:Gallery>
                                 </dxr:RibbonGalleryBarItem.Gallery>
@@ -221,7 +221,7 @@
                                         <dxg:GridColumn IsSmart="True" FieldName="Status" Width="40" FixedWidth="True" AllowSorting="False" HorizontalHeaderContentAlignment="Center">
                                             <dxg:GridColumn.HeaderTemplate>
                                                 <DataTemplate>
-                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Print.svg'}" Stretch="None"/>
+                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Print.svg'}" Stretch="None"/>
                                                 </DataTemplate>
                                             </dxg:GridColumn.HeaderTemplate>
                                             <dxg:GridColumn.CellTemplate>
@@ -245,7 +245,7 @@
                                         <dxg:GridColumn IsSmart="True" FieldName="AttachedFilesCount" Width="40" FixedWidth="True" HorizontalHeaderContentAlignment="Center">
                                             <dxg:GridColumn.HeaderTemplate>
                                                 <DataTemplate>
-                                                    <Image Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}" Stretch="None"/>
+                                                    <Image Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/AttachFile.svg'}" Stretch="None"/>
                                                 </DataTemplate>
                                             </dxg:GridColumn.HeaderTemplate>
                                             <dxg:GridColumn.CellTemplate>
@@ -266,7 +266,7 @@
                                         <dxg:GridColumn IsSmart="True" FieldName="FollowUp" AllowSorting="False" HorizontalHeaderContentAlignment="Center" FixedWidth="True" Width="40" ReadOnly="True">
                                             <dxg:GridColumn.HeaderTemplate>
                                                 <DataTemplate>
-                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/FollowUpAll.svg'}" Stretch="None"/>
+                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/FollowUpAll.svg'}" Stretch="None"/>
                                                 </DataTemplate>
                                             </dxg:GridColumn.HeaderTemplate>
                                             <dxg:GridColumn.CellTemplate>
@@ -287,7 +287,7 @@
                                             </dxg:GridColumn.CellTemplate>
                                             <dxg:GridColumn.HeaderTemplate>
                                                 <DataTemplate>
-                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Categorize.svg'}" Stretch="None"/>
+                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Categorize.svg'}" Stretch="None"/>
                                                 </DataTemplate>
                                             </dxg:GridColumn.HeaderTemplate>
                                         </dxg:GridColumn>
@@ -295,7 +295,7 @@
                                                         HorizontalHeaderContentAlignment="Center" FixedWidth="True" Width="40" ReadOnly="True">
                                             <dxg:GridColumn.HeaderTemplate>
                                                 <DataTemplate>
-                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Private.svg'}" Stretch="None"/>
+                                                    <dx:DXImage Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Private.svg'}" Stretch="None"/>
                                                 </DataTemplate>
                                             </dxg:GridColumn.HeaderTemplate>
                                         </dxg:GridColumn>
@@ -304,18 +304,18 @@
                                         <dxg:TableView AutoScrollOnSorting="False" AllowGrouping="False" AutoWidth="True" NewItemRowPosition="Top" AllowEditing="False" AllowColumnMoving="False" ShowFixedTotalSummary="False" AllowPerPixelScrolling="True" ShowColumnHeaders="True" ShowGroupPanel="False"
                                                     ShowSearchPanelMode="Always" ShowIndicator="False" SearchPanelHorizontalAlignment="Right" NavigationStyle="Row" SearchPanelNullText="Search Tasks (Ctrl + F)" ShowFilterPopup="EmployeeTasks_ShowFilterPopup" ColumnFilterPopupMode="Excel">
                                             <dxg:TableView.RowCellMenuCustomizations>
-                                                <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.NewCommand}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewTask.svg'}"/>
-                                                <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}"/>
-                                                <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.DeleteCommand}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"/>
-                                                <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/ChangeView.svg'}"/>
+                                                <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.NewCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/NewTask.svg'}"/>
+                                                <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
+                                                <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.DeleteCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"/>
+                                                <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:SvgImageSource Uri='/Resources/ChangeView.svg'}"/>
                                                 <dxb:BarItemSeparator/>
-                                                <dxb:BarButtonItem Content="Mark Complete" Command="{Binding View.DataContext.MarkCompleteCommand}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/MarkComplete.svg'}"/>
+                                                <dxb:BarButtonItem Content="Mark Complete" Command="{Binding View.DataContext.MarkCompleteCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/MarkComplete.svg'}"/>
                                                 <dxb:BarItemSeparator/>
                                                 <dxb:BarSplitButtonItem Content="Categorize" ActAsDropDown="True" RibbonStyle="Large">
                                                     <dxb:BarSplitButtonItem.GlyphTemplate>
                                                         <DataTemplate>
                                                             <Canvas Name="canvas" Width="16" Height="16">
-                                                                <dx:DXImage Name="image" Source="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Categorize.svg'}"/>
+                                                                <dx:DXImage Name="image" Source="{dx:SvgImageSource Size='16,16', Uri='/Resources/Categorize.svg'}"/>
                                                                 <Border Name="border" Width="14" Height="2" Canvas.Left="1" Canvas.Top="14">
                                                                     <Border.Background>
                                                                         <SolidColorBrush Color="{Binding View.DataContext.Category, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ColorConverter}}"/>
@@ -331,17 +331,17 @@
                                                         </dxb:PopupControlContainer>
                                                     </dxb:BarSplitButtonItem.PopupControl>
                                                 </dxb:BarSplitButtonItem>
-                                                <dxb:BarSubItem Content="Follow Up" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/FollowUp.svg'}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/FollowUp.svg'}">
-                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[0], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Today" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="Today" Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Today.svg'}"/>
-                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[1], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Tomorrow" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="Tomorrow"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Tomorrow.svg'}"/>
-                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[2], Mode=TwoWay}" AllowUncheckInGroup="True" Content="This Week" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="ThisWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/ThisWeek.svg'}"/>
-                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[3], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Next Week" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="NextWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NextWeek.svg'}"/>
-                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[4], Mode=TwoWay}" AllowUncheckInGroup="True" Content="No Date" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="NoDate"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/NoDate.svg'}"/>
-                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[5], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Custom" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="Custom"  Glyph="{dx:SvgImageSource Size='16,16', Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Tasks/Custom.svg'}"/>
+                                                <dxb:BarSubItem Content="Follow Up" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/FollowUp.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Tasks/FollowUp.svg'}">
+                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[0], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Today" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="Today" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Today.svg'}"/>
+                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[1], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Tomorrow" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="Tomorrow"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Tomorrow.svg'}"/>
+                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[2], Mode=TwoWay}" AllowUncheckInGroup="True" Content="This Week" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="ThisWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/ThisWeek.svg'}"/>
+                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[3], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Next Week" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="NextWeek"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NextWeek.svg'}"/>
+                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[4], Mode=TwoWay}" AllowUncheckInGroup="True" Content="No Date" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="NoDate"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/NoDate.svg'}"/>
+                                                    <dxb:BarCheckItem GroupIndex="1" IsChecked="{Binding View.DataContext.FollowUpSelector[5], Mode=TwoWay}" AllowUncheckInGroup="True" Content="Custom" Command="{Binding View.DataContext.FollowUpCommand}" CommandParameter="Custom"  Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/Tasks/Custom.svg'}"/>
                                                 </dxb:BarSubItem>
                                                 <dxb:BarItemSeparator/>
-                                                <dxb:BarButtonItem Content="Assign Task" Command="{Binding View.DataContext.AssignTaskCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AssignTask.svg'}"/>
-                                                <dxb:BarButtonItem Content="Attach File" Command="{Binding View.DataContext.AttachFileCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/AttachFile.svg'}"/>
+                                                <dxb:BarButtonItem Content="Assign Task" Command="{Binding View.DataContext.AssignTaskCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/AssignTask.svg'}"/>
+                                                <dxb:BarButtonItem Content="Attach File" Command="{Binding View.DataContext.AttachFileCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/AttachFile.svg'}"/>
                                             </dxg:TableView.RowCellMenuCustomizations>
                                             <dxg:TableView.RuntimeLocalizationStrings>
                                                 <dxg:GridRuntimeStringCollection>

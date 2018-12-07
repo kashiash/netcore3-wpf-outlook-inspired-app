@@ -39,24 +39,24 @@
                 <dxr:RibbonPage Caption="Home">
                     <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem Content="New Opportunity" Command="{Binding NewCommand}"
-                                   LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewOpportunities.svg'}"
-                                   Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/NewOpportunities.svg'}"/>
+                                   LargeGlyph="{dx:SvgImageSource Uri='/Resources/NewOpportunities.svg'}"
+                                   Glyph="{dx:SvgImageSource Uri='/Resources/NewOpportunities.svg'}"/>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Delete.svg'}"/>
+                        <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"/>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Actions">
-                        <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Edit.svg'}"/>
+                        <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="View">
-                        <dxb:BarButtonItem Content="Opportunities Map" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Mapit.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Mapit.svg'}">
+                        <dxb:BarButtonItem Content="Opportunities Map" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Mapit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Mapit.svg'}">
                             <dxmvvm:Interaction.Behaviors>
                                 <dxmvvm:MethodToCommandBehavior Method="ShowMap" Arg1="{Binding SelectionRangeStart, Mode=OneWay, ElementName=rangeControl}" Arg2="{Binding SelectionRangeEnd, Mode=OneWay, ElementName=rangeControl}"/>
                             </dxmvvm:Interaction.Behaviors>
                         </dxb:BarButtonItem>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Find">
-                        <dxb:BarButtonItem Content="Custom Filter" Command="{Binding CreateCustomFilterCommand}" LargeGlyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Filter.svg'}" Glyph="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.OutlookInspiredApp.Wpf;component/Resources/Filter.svg'}"/>
+                        <dxb:BarButtonItem Content="Custom Filter" Command="{Binding CreateCustomFilterCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Filter.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Filter.svg'}"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             </dxr:RibbonDefaultPageCategory>
