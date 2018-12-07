@@ -15,6 +15,10 @@ using DevExpress.Xpf.DemoLauncher;
 namespace DevExpress.DevAV {
     public partial class App : Application {
         static IDisposable singleInstanceApplicationGuard;
+        static App()
+        {
+            ApplicationThemeHelper.UseLegacyDefaultTheme = true;
+        }
 
         protected override void OnStartup(StartupEventArgs e) {
             ExceptionHelper.Initialize();
@@ -31,7 +35,7 @@ namespace DevExpress.DevAV {
                 return;
             }
             Theme.TouchlineDark.ShowInThemeSelector = false;
-            ApplicationThemeHelper.ApplicationThemeName = Theme.Office2016ColorfulSE.Name;
+            //ApplicationThemeHelper.ApplicationThemeName = Theme.Office2016ColorfulSE.Name;
             SetCultureInfo();
         }
         static void SetCultureInfo() {

@@ -4,7 +4,7 @@ using DevExpress.Xpf.Bars;
 using DevExpress.Xpf.Core;
 
 namespace DevExpress.DevAV {
-    public partial class MainWindow : Window {
+    public partial class MainWindow : ThemedWindow {
         public MainWindow() {
             
             InitializeComponent();

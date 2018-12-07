@@ -77,9 +77,12 @@
                                                            ShowColumnHeaders="False" ShowFilterHeaders="False" AutoExpandGroups="True"
                                                            ColumnFieldValuesAlignment="Center" DataSource="{Binding Entities}"
                                                            AllowPrefilter="False" ShowPrefilterPanelMode="Never"
-                                                           PrefilterCriteria="{Binding Source={x:Reference rangeControl}, Path=SelectionRange, Mode=OneWay, Converter={StaticResource EditRangeToFilterCriteriaConverter}, ConverterParameter=Date}"
+                                                           
                                                            CustomSummary="CustomSummary"
                                                            HorizontalContentAlignment="Center" ShowColumnGrandTotalHeader="False">
+
+                                    <!--PrefilterCriteria="{Binding Source={x:Reference rangeControl}, Path=SelectionRange, Mode=OneWay, Converter={StaticResource EditRangeToFilterCriteriaConverter}, ConverterParameter=Date}"-->
+
                                     <dxpg:PivotGridControl.Fields>
                                         <dxpg:PivotGridField x:Name="fieldState" FieldName="State" Area="RowArea" AllowFilter="False" AreaIndex="0" Caption="State"/>
                                         <dxpg:PivotGridField x:Name="fieldCity" FieldName="City" Area="RowArea" AllowFilter="False" AreaIndex="1" Caption="City"/>

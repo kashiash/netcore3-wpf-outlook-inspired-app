@@ -10,14 +10,8 @@
     <Reference Include="DevExpress.Charts.v18.2.Core">
       <HintPath>..\..\bin\DevExpress.Charts.v18.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v18.2">
-      <HintPath>..\..\bin\DevExpress.CodeParser.v18.2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Data.v18.2">
       <HintPath>..\..\bin\DevExpress.Data.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v18.2">
-      <HintPath>..\..\bin\DevExpress.DataAccess.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.DemoData.v18.2">
       <HintPath>..\..\bin\DevExpress.DemoData.v18.2.dll</HintPath>
@@ -30,9 +24,6 @@
     </Reference>
     <Reference Include="DevExpress.DevAV.v18.2.Reports">
       <HintPath>..\..\bin\DevExpress.DevAV.v18.2.Reports.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Diagram.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Diagram.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Docs.v18.2">
       <HintPath>..\..\bin\DevExpress.Docs.v18.2.dll</HintPath>
@@ -76,12 +67,6 @@
     <Reference Include="DevExpress.RichEdit.v18.2.Export">
       <HintPath>..\..\bin\DevExpress.RichEdit.v18.2.Export.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Snap.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Snap.v18.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Sparkline.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Sparkline.v18.2.Core.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.SpellChecker.v18.2.Core">
       <HintPath>..\..\bin\DevExpress.SpellChecker.v18.2.Core.dll</HintPath>
     </Reference>
@@ -94,23 +79,14 @@
     <Reference Include="DevExpress.Xpf.Charts.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Charts.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpf.CodeView.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.CodeView.v18.2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Xpf.Controls.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Controls.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Core.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Core.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpf.DataAccess.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.DataAccess.v18.2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Xpf.DemoBase.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.DemoBase.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpf.Diagram.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Diagram.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Docking.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Docking.v18.2.dll</HintPath>
@@ -142,9 +118,6 @@
     <Reference Include="DevExpress.Xpf.Map.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Map.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpf.NavBar.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.NavBar.v18.2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Xpf.PdfViewer.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.PdfViewer.v18.2.dll</HintPath>
     </Reference>
@@ -153,9 +126,6 @@
     </Reference>
     <Reference Include="DevExpress.Xpf.Printing.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Printing.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpf.PropertyGrid.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.PropertyGrid.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.ReportDesigner.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.ReportDesigner.v18.2.dll</HintPath>
@@ -171,15 +141,6 @@
     </Reference>
     <Reference Include="DevExpress.Xpf.Spreadsheet.v18.2">
       <HintPath>..\..\bin\DevExpress.Xpf.Spreadsheet.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpo.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpo.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v18.2">
-      <HintPath>..\..\bin\DevExpress.XtraCharts.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGauges.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.XtraGauges.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraReports.v18.2">
       <HintPath>..\..\bin\DevExpress.XtraReports.v18.2.dll</HintPath>
