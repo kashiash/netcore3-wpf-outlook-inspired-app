@@ -4,8 +4,9 @@ using DevExpress.Xpf.Bars;
 using DevExpress.Xpf.Core;
 
 namespace DevExpress.DevAV {
-    public partial class MainWindow : ThemedWindow {
+    public partial class MainWindow : Window {
         public MainWindow() {
+            
             InitializeComponent();
             if(Height > SystemParameters.VirtualScreenHeight || Width > SystemParameters.VirtualScreenWidth)
                 WindowState = WindowState.Maximized;

@@ -22,7 +22,6 @@ namespace DevExpress.DevAV {
             DevAVDataDirectoryHelper.LocalPrefix = "WpfOutlookInspiredApp";
             ImagesAssemblyLoader.Load();
             Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata(200));
-            LoadPlugins();
             base.OnStartup(e);
             ViewLocator.Default = new ViewLocator(typeof(App).Assembly);
             bool exit;
@@ -53,37 +52,5 @@ namespace DevExpress.DevAV {
             }
             return null;
         }
-        #region LoadPlugins
-        static void LoadPlugins() {
-            foreach(string file in Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments), "DevExpress.OutlookInspiredApp.Wpf.Plugins.*.exe")) {
-                Assembly.LoadFrom(file)
-                    .With(x => x.GetType("Global.Program"))
-                    .With(x => x.GetMethod("Start", BindingFlags.Static | BindingFlags.Public, null, new Type[] { }, null))
-                    .Do(x => x.Invoke(null, new object[] { }));
-            }
-        }
-        #endregion
     }
 }
-#if CLICKONCE
-namespace DevExpress.Internal.DemoLauncher {
-    public static class ClickOnceEntryPoint {
-        public static Tuple<Action, System.Threading.Tasks.Task<Window>> Run() {
-            var done = new System.Threading.Tasks.TaskCompletionSource<Window>();
-            Action run = () => {
-                var app = new DevExpress.DevAV.App();
-                app.InitializeComponent();
-                typeof(Application).GetField("_startupUri", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).SetValue(app, null);
-                app.Startup += (s, e) => {
-                    var window = new DevExpress.DevAV.MainWindow();
-                    window.Show();
-                    app.MainWindow = window;
-                    done.SetResult(window);
-                };
-                app.Run();
-            };
-            return Tuple.Create(run, done.Task);
-        }
-    }
-}
-#endif
