@@ -68,10 +68,10 @@ namespace DevExpress.DevAV.ViewModels {
             Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Sales: {0}", reportId));
         }
         void SetDefaultReport(IReportInfo reportInfo) {
-            this.GetRequiredService<IReportService>("DocumentViewerService").SetDefaultReport(reportInfo);
-            if(this.IsInDesignMode()) return;
-            ExportService.SetDefaultReport(reportInfo);
-            PrintService.SetDefaultReport(reportInfo);
+//            this.GetRequiredService<IReportService>("DocumentViewerService").SetDefaultReport(reportInfo);
+ //           if(this.IsInDesignMode()) return;
+  //          ExportService.SetDefaultReport(reportInfo);
+  //          PrintService.SetDefaultReport(reportInfo);
         }
         IReportService PrintService { get { return this.GetRequiredService<IReportService>("PrintService"); } }
         IReportService ExportService { get { return this.GetRequiredService<IReportService>("ExportService"); } }

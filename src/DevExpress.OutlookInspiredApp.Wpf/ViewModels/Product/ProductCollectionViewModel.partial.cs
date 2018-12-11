@@ -27,7 +27,7 @@ namespace DevExpress.DevAV.ViewModels {
             base.OnSelectedEntityChanged();
             if(SelectedEntity != null)
                 SelectedPdfStream = SelectedEntity.Catalog[0].PdfStream;
-            SetDefaultReport(ReportInfoFactory.ProductProfile(SelectedEntity));
+            //SetDefaultReport(ReportInfoFactory.ProductProfile(SelectedEntity));
         }
         protected override void OnEntitiesAssigned(Func<Product> getSelectedEntityCallback) {
             base.OnEntitiesAssigned(getSelectedEntityCallback);

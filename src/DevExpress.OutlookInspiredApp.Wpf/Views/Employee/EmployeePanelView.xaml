@@ -8,7 +8,6 @@
     xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
     xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
     xmlns:viewmodel="clr-namespace:DevExpress.DevAV.ViewModels"
-    xmlns:model="clr-namespace:DevExpress.DevAV;assembly=DevExpress.DevAV.v18.2.Data"
     xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"
     xmlns:local="clr-namespace:DevExpress.DevAV"
     mc:Ignorable="d"

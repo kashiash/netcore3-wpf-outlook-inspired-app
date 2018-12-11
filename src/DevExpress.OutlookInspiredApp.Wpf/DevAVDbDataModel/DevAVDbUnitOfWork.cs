@@ -1,6 +1,6 @@
 ﻿using DevExpress.DevAV;
 using DevExpress.Mvvm.DataModel;
-using DevExpress.Mvvm.DataModel.EF6;
+using DevExpress.Mvvm.DataModel.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

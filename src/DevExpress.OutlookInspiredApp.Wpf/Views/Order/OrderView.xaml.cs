@@ -16,7 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DevExpress.DevAV.Reports.Spreadsheet;
+//using DevExpress.DevAV.Reports.Spreadsheet;
 
 namespace DevExpress.DevAV.Views {
     /// <summary>
@@ -51,7 +51,7 @@ namespace DevExpress.DevAV.Views {
             return cell.Worksheet.DefinedNames.GetDefinedName("InvoiceItems");
         }
         bool IsInvoiceWorksheet(Cell cell) {
-            return cell.Worksheet.Name == CellsHelper.InvoiceWorksheetName;
+            return false;// cell.Worksheet.Name == CellsHelper.InvoiceWorksheetName;
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using DevExpress.DevAV.Reports;
+//using DevExpress.DevAV.Reports;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.XtraReports.UI;
@@ -30,7 +30,7 @@ namespace DevExpress.DevAV.ViewModels {
 
         public virtual void OnLoaded() {
             Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Sales: Revenue{0}", Format.ToString()));
-            Report = CreateReport();
+            //Report = CreateReport();
             Report.CreateDocument();
         }
 
@@ -56,10 +56,11 @@ namespace DevExpress.DevAV.ViewModels {
             report.DataSource = SelectedItems;
             report.Parameters["paramOrderDate"].Value = true;
         }
-        XtraReport CreateReport() {
+ /*       XtraReport CreateReport() {
             return Format == RevenueReportFormat.Summary ? ReportFactory.SalesRevenueReport(SelectedItems, true):
                 ReportFactory.SalesRevenueAnalysisReport(SelectedItems, true);
         }
+        */
         string CreateTitle() {
             return string.Format("DevAV - {0}", Format == RevenueReportFormat.Analysis ? "Revenue Analysis" : "Revenue");
         }

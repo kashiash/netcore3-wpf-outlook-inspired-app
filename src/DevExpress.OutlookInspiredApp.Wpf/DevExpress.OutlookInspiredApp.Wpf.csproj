@@ -11,10 +11,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Behaviors\InvoiceEditBehavior.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\About.svg" />
     <None Remove="Resources\Active.svg" />
     <None Remove="Resources\AddColumn.svg" />
     <None Remove="Resources\AddFile.svg" />
+    <None Remove="Resources\Analysis\CustomerAnalysis.xlsx" />
+    <None Remove="Resources\Analysis\ProductAnalysis.xlsx" />
     <None Remove="Resources\AssignTask.svg" />
     <None Remove="Resources\AttachFile.svg" />
     <None Remove="Resources\Buttons\Glyph_Mail.svg" />
@@ -55,6 +61,24 @@
     <None Remove="Resources\Low.svg" />
     <None Remove="Resources\LowImportance.svg" />
     <None Remove="Resources\MailMerge.svg" />
+    <None Remove="Resources\MailMerge\Employee of the Month.rtf" />
+    <None Remove="Resources\MailMerge\Employee of the Month.snx" />
+    <None Remove="Resources\MailMerge\Employee Probation Notice.rtf" />
+    <None Remove="Resources\MailMerge\Employee Probation Notice.snx" />
+    <None Remove="Resources\MailMerge\Employee Service Excellence.rtf" />
+    <None Remove="Resources\MailMerge\Employee Service Excellence.snx" />
+    <None Remove="Resources\MailMerge\Employee Thank You Note.rtf" />
+    <None Remove="Resources\MailMerge\Employee Thank You Note.snx" />
+    <None Remove="Resources\MailMerge\Order.snx" />
+    <None Remove="Resources\MailMerge\Sales Analysys Report.snx" />
+    <None Remove="Resources\MailMerge\Sales Invoice.snx" />
+    <None Remove="Resources\MailMerge\Sales Order Follow-Up Detail.rtf" />
+    <None Remove="Resources\MailMerge\Sales Order Follow-Up.rtf" />
+    <None Remove="Resources\MailMerge\Sales Order Summary Report.snx" />
+    <None Remove="Resources\MailMerge\Sales Thank You.rtf" />
+    <None Remove="Resources\MailMerge\Sales Thank You.snx" />
+    <None Remove="Resources\MailMerge\Welcome to DevAV.rtf" />
+    <None Remove="Resources\MailMerge\Welcome to DevAV.snx" />
     <None Remove="Resources\Mapit.svg" />
     <None Remove="Resources\MapItems\A.svg" />
     <None Remove="Resources\MapItems\ArrowBearLeft.svg" />
@@ -697,23 +721,84 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Analysis\CustomerAnalysis.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Analysis\ProductAnalysis.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee of the Month.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee of the Month.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Probation Notice.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Probation Notice.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Service Excellence.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Service Excellence.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Thank You Note.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Employee Thank You Note.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Order.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Analysys Report.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Invoice.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Follow-Up Detail.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Follow-Up.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Thank You.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Sales Thank You.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1-servicing-27114-05" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="DevExpress.Charts.v18.2.Core">
       <HintPath>..\..\bin\DevExpress.Charts.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Data.v18.2">
       <HintPath>..\..\bin\DevExpress.Data.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DemoData.v18.2">
-      <HintPath>..\..\bin\DevExpress.DemoData.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DemoData.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.DemoData.v18.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DevAV.v18.2.Data">
-      <HintPath>..\..\bin\DevExpress.DevAV.v18.2.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DevAV.v18.2.Reports">
-      <HintPath>..\..\bin\DevExpress.DevAV.v18.2.Reports.dll</HintPath>
+    <Reference Include="DevExpress.DevAV">
+      <HintPath>..\DevExpress.DevAV\bin\Debug\netstandard2.0\DevExpress.DevAV.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Docs.v18.2">
       <HintPath>..\..\bin\DevExpress.Docs.v18.2.dll</HintPath>
@@ -730,8 +815,9 @@
     <Reference Include="DevExpress.Mvvm.v18.2.DataModel">
       <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.DataModel.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Mvvm.v18.2.DataModel.EF6">
-      <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.DataModel.EF6.dll</HintPath>
+    <Reference Include="DevExpress.Mvvm.v18.2.DataModel.EFCore">
+      <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.DataModel.EFCore.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v18.2.ViewModel">
       <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.ViewModel.dll</HintPath>

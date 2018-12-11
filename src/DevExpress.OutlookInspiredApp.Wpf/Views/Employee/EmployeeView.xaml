@@ -11,7 +11,7 @@
     xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
     xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
     xmlns:viewmodel="clr-namespace:DevExpress.DevAV.ViewModels"
-    xmlns:model="clr-namespace:DevExpress.DevAV;assembly=DevExpress.DevAV.v18.2.Data"
+    xmlns:model="clr-namespace:DevExpress.DevAV;assembly=DevExpress.DevAV"
     xmlns:common="clr-namespace:DevExpress.DevAV.Common.View"
     xmlns:view="clr-namespace:DevExpress.DevAV.Views"
     xmlns:local="clr-namespace:DevExpress.DevAV"

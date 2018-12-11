@@ -347,20 +347,6 @@
                             <dxnav:OfficeNavigationBar.ItemContainerStyle>
                                 <Style TargetType="dxnav:NavigationBarItem">
                                     <Setter Property="Padding" Value="13,0,4,0"/>
-                                    <Setter Property="ContentTemplate">
-                                        <Setter.Value>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="{Binding Header}"/>
-                                                    <Grid VerticalAlignment="Top" Visibility="{Binding DataContext.FilterTreeViewModel.WarningInfo, Converter={StaticResource NullToVisibilityConverter}}">
-                                                        <Border Background="#FFED1C24" CornerRadius="9">
-                                                            <TextBlock Text="{Binding DataContext.FilterTreeViewModel.WarningInfo}" Margin="5,0,5,0" Foreground="#FFFFFFFF" FontSize="12"/>
-                                                        </Border>
-                                                    </Grid>
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </Setter.Value>
-                                    </Setter>
                                 </Style>
                             </dxnav:OfficeNavigationBar.ItemContainerStyle>
                         </dxnav:OfficeNavigationBar>

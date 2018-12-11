@@ -13,7 +13,7 @@ using DevExpress.Mvvm.POCO;
 using DevExpress.Xpf.Map;
 using System.Windows;
 using System.IO;
-using DevExpress.DevAV.Reports;
+//using DevExpress.DevAV.Reports;
 
 namespace DevExpress.DevAV.ViewModels {
     public class OrderMapViewModel: NavigatorMapViewModel<CustomerStore> {
@@ -41,7 +41,7 @@ namespace DevExpress.DevAV.ViewModels {
         }
         void CreateShippingDetailPdf() {
             PdfStream = new MemoryStream();
-            ReportFactory.ShippingDetail(Order).ExportToPdf(PdfStream);
+            //ReportFactory.ShippingDetail(Order).ExportToPdf(PdfStream);
             ShipmentText = GetShipmentText();
         }
         string GetShipmentText() {

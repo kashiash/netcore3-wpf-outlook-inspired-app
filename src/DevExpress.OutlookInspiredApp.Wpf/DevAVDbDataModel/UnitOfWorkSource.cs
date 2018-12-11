@@ -2,7 +2,7 @@
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.DataModel.DesignTime;
-using DevExpress.Mvvm.DataModel.EF6;
+using DevExpress.Mvvm.DataModel.EFCore;
 using System;
 using System.Collections;
 using System.Linq;
@@ -28,7 +28,7 @@ namespace DevExpress.DevAV.DevAVDbDataModel {
         public static IUnitOfWorkFactory<IDevAVDbUnitOfWork> GetUnitOfWorkFactory(bool isInDesignTime) {
 			if(isInDesignTime)
                 return new DesignTimeUnitOfWorkFactory<IDevAVDbUnitOfWork>(() => new DevAVDbDesignTimeUnitOfWork());
-            return new DbUnitOfWorkFactory<IDevAVDbUnitOfWork>(() => new DevAVDbUnitOfWork(() => new DevAVDb()));
+            return new DbUnitOfWorkFactory<IDevAVDbUnitOfWork>(() => new DevAVDbUnitOfWork(() => new DevAVDb(@"Data Source=..\..\Data\devav.sqlite3")));
         }
     }
 }

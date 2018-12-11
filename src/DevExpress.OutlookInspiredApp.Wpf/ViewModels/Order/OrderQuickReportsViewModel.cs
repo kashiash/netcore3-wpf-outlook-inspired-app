@@ -1,5 +1,5 @@
 using DevExpress.DevAV.DevAVDbDataModel;
-using DevExpress.DevAV.Reports;
+//using DevExpress.DevAV.Reports;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm.POCO;
@@ -34,7 +34,7 @@ namespace DevExpress.DevAV.ViewModels {
 
         public virtual void OnLoaded() {
             var documentStream = new MemoryStream();
-            var report = ReportFactory.SalesInvoice(SelectedOrder, true, false, false, false);            
+            /*var report = ReportFactory.SalesInvoice(SelectedOrder, true, false, false, false);            
             switch(Format) {
                 case ReportFormat.Pdf:
                     report.ExportToPdf(documentStream);
@@ -48,7 +48,7 @@ namespace DevExpress.DevAV.ViewModels {
                     options.TableLayout = true;
                     report.ExportToDocx(documentStream, options);
                     break;
-            }
+            }*/
             DocumentDataSource = new Tuple<IDevAVDbUnitOfWork, Order>(null, SelectedOrder);
             DocumentStream = documentStream;
         }

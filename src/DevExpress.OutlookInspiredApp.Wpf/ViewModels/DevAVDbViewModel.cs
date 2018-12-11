@@ -37,20 +37,20 @@ namespace DevExpress.DevAV.ViewModels {
         protected override DevAVDbModuleDescription[] CreateModules() {
             return new DevAVDbModuleDescription[] {
                 // Uncomment for SQLite tests
-                //new DevAVDbModuleDescription("Employees", "EmployeeCollectionView", TablesGroup, FiltersSettings.GetEmployeesFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Employees)),
+                new DevAVDbModuleDescription("Employees", "EmployeeCollectionView", TablesGroup, FiltersSettings.GetEmployeesFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Employees)),
                 //new DevAVDbModuleDescription("Tasks", "TaskCollectionView", TablesGroup, FiltersSettings.GetTasksFilterTree(this)),
-                //new DevAVDbModuleDescription("Customers", "CustomerCollectionView", TablesGroup, FiltersSettings.GetCustomersFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Customers)),
-                //new DevAVDbModuleDescription("Products", "ProductCollectionView", TablesGroup, FiltersSettings.GetProductsFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Products)),
-                //new DevAVDbModuleDescription("Sales", "OrderCollectionView", TablesGroup, FiltersSettings.GetSalesFilterTree(this)),
-                //new DevAVDbModuleDescription("Opportunities", "QuoteCollectionView", TablesGroup, FiltersSettings.GetOpportunitiesFilterTree(this)),
-                //
+                new DevAVDbModuleDescription("Customers", "CustomerCollectionView", TablesGroup, FiltersSettings.GetCustomersFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Customers)),
+                new DevAVDbModuleDescription("Products", "ProductCollectionView", TablesGroup, FiltersSettings.GetProductsFilterTree(this), GetPeekCollectionViewModelFactory(x => x.Products)),
+                new DevAVDbModuleDescription("Sales", "OrderCollectionView", TablesGroup, null /*FiltersSettings.GetSalesFilterTree(this)*/),
+                //new DevAVDbModuleDescription("Opportunities", "QuoteCollectionView", TablesGroup, null /*FiltersSettings.GetOpportunitiesFilterTree(this)*/),
+
             };
         }
         Workspace defaultWorkspace = new Workspace();
         LinksViewModel linksViewModel;
 
         // Comment for SQLite tests
-        public override DevAVDbModuleDescription DefaultModule { get { return null; } }
+        //public override DevAVDbModuleDescription DefaultModule { get { return null; } }
 
 
         public override void OnLoaded(DevAVDbModuleDescription module) {

@@ -12,7 +12,7 @@
          xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" 
         xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
         xmlns:viewmodel="clr-namespace:DevExpress.DevAV.ViewModels"
-        xmlns:devav="clr-namespace:DevExpress.DevAV;assembly=DevExpress.DevAV.v18.2.Data"
+        xmlns:devav="clr-namespace:DevExpress.DevAV;assembly=DevExpress.DevAV"
         xmlns:local="clr-namespace:DevExpress.DevAV"
         xmlns:view="clr-namespace:DevExpress.DevAV.Views"
         xmlns:common="clr-namespace:DevExpress.DevAV.Common.View"  

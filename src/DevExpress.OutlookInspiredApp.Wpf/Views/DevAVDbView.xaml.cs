@@ -17,8 +17,12 @@ namespace DevExpress.DevAV.Views {
     }
     public class OutlookChildrenSelector : IChildrenSelector {
         IEnumerable IChildrenSelector.SelectChildren(object item) {
-            if(item is DevAVDbModuleDescription)
+            if(item is DevAVDbModuleDescription) {
+                if (((DevAVDbModuleDescription)item).FilterTreeViewModel == null)
+                    return null;
+
                 return ((DevAVDbModuleDescription)item).FilterTreeViewModel.Categories;
+            }
             else if(item is FilterCategory) {
                 return ((FilterCategory)item).FilterItems;
             }

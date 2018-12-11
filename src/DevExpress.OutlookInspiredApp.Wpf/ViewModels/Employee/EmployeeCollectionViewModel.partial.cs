@@ -72,7 +72,7 @@ namespace DevExpress.DevAV.ViewModels {
             ShowReport(ReportInfoFactory.EmployeeDirectory(Entities), "Directory");
         }
         public void PrintTaskList() {
-            ShowReport(ReportInfoFactory.TaskListReport(CreateUnitOfWork().Tasks.ToList()), "TaskList");
+            //ShowReport(ReportInfoFactory.TaskListReport(CreateUnitOfWork().Tasks.ToList()), "TaskList");
         }
 
         void ShowReport(IReportInfo reportInfo, string reportId) {

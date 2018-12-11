@@ -19,10 +19,11 @@ namespace DevExpress.DevAV.ViewModels {
         }
         public EmployeeTaskDetailsCollectionViewModel EmployeeAssignedTasksDetails {
             get {
-                if(employeeAssignedTasksDetails == null) {
-                    employeeAssignedTasksDetails = EmployeeTaskDetailsCollectionViewModel.Create().SetParentViewModel(this);
-                }
-                return employeeAssignedTasksDetails;
+                return null;
+             //   if(employeeAssignedTasksDetails == null) {
+             //       employeeAssignedTasksDetails = EmployeeTaskDetailsCollectionViewModel.Create().SetParentViewModel(this);
+              //  }
+             //   return employeeAssignedTasksDetails;
             }
         }
         protected override void OnEntityChanged() {
@@ -30,7 +31,7 @@ namespace DevExpress.DevAV.ViewModels {
             Contacts.Entity = Entity;
             QuickLetter.Entity = Entity;
             SetDefaultReport(ReportInfoFactory.EmployeeProfile(Entity));
-            EmployeeAssignedTasksDetails.UpdateFilter();
+            //EmployeeAssignedTasksDetails.UpdateFilter();
             if(Entity != null)
                 Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Edit Employee: {0}", 
                     string.IsNullOrEmpty(Entity.FullName) ? "<New>" : Entity.FullName));
@@ -88,7 +89,7 @@ namespace DevExpress.DevAV.ViewModels {
             ShowReport(ReportInfoFactory.EmployeeDirectory(Repository.ToList()), "Directory");
         }
         public void PrintTaskList() {
-            ShowReport(ReportInfoFactory.EmployeeTaskList(UnitOfWork.Tasks.ToList()), "TaskList");
+            //ShowReport(ReportInfoFactory.EmployeeTaskList(UnitOfWork.Tasks.ToList()), "TaskList");
         }
 
         void ShowReport(IReportInfo reportInfo, string reportId) {
