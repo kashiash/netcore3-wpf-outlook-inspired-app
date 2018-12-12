@@ -17,13 +17,60 @@ namespace DevExpress.DevAV {
         public Customer() {
             Employees = new List<CustomerEmployee>();
             Orders = new List<Order>();
-            HomeOffice = new Address();
-            BillingAddress = new Address();
+            _homeOffice = new Address();
+            _billingAddress = new Address();
         }
         [Required]
         public string Name { get; set; }
-        public Address HomeOffice { get; set; }
-        public Address BillingAddress { get; set; }
+        Address _homeOffice;
+        [NotMapped]
+        public Address HomeOffice {
+            get {
+                AddressHelper.UpdateAddress(_homeOffice, HomeOffice_Line, HomeOffice_City, HomeOffice_State, HomeOffice_ZipCode, HomeOffice_Latitude, HomeOffice_Longitude);
+                return _homeOffice;
+            }
+            set {
+                AddressHelper.UpdateAddress(_homeOffice, value.Line, value.City, value.State, value.ZipCode, value.Latitude, value.Longitude);
+                HomeOffice_Line = _homeOffice.Line;
+                HomeOffice_City = _homeOffice.City;
+                HomeOffice_State = _homeOffice.State;
+                HomeOffice_ZipCode = _homeOffice.ZipCode;
+                HomeOffice_Latitude = _homeOffice.Latitude;
+                HomeOffice_Longitude = _homeOffice.Longitude;
+            }
+        }
+        Address _billingAddress;
+        [NotMapped]
+        public Address BillingAddress {
+            get {
+                AddressHelper.UpdateAddress(_billingAddress, BillingAddress_Line, BillingAddress_City, BillingAddress_State, BillingAddress_ZipCode, BillingAddress_Latitude, BillingAddress_Longitude);
+                return _billingAddress;
+            }
+            set {
+                AddressHelper.UpdateAddress(_billingAddress, value.Line, value.City, value.State, value.ZipCode, value.Latitude, value.Longitude);
+                BillingAddress_Line = _billingAddress.Line;
+                BillingAddress_City = _billingAddress.City;
+                BillingAddress_State = _billingAddress.State;
+                BillingAddress_ZipCode = _billingAddress.ZipCode;
+                BillingAddress_Latitude = _billingAddress.Latitude;
+                BillingAddress_Longitude = _billingAddress.Longitude;
+            }
+        }
+        #region EFCore
+        public string HomeOffice_Line { get; set; }
+        public string HomeOffice_City { get; set; }
+        public StateEnum HomeOffice_State { get; set; }
+        public string HomeOffice_ZipCode { get; set; }
+        public double HomeOffice_Latitude { get; set; }
+        public double HomeOffice_Longitude { get; set; }
+        public string BillingAddress_Line { get; set; }
+        public string BillingAddress_City { get; set; }
+        public StateEnum BillingAddress_State { get; set; }
+        public string BillingAddress_ZipCode { get; set; }
+        public double BillingAddress_Latitude { get; set; }
+        public double BillingAddress_Longitude { get; set; }
+        #endregion
+
         public virtual List<CustomerEmployee> Employees { get; set; }
         [Phone]
         public string Phone { get; set; }

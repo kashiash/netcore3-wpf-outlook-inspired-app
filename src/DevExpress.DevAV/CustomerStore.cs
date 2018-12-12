@@ -10,9 +10,36 @@ using System.Runtime.Serialization;
 
 namespace DevExpress.DevAV {
     public class CustomerStore : DatabaseObject {
+        public CustomerStore() {
+            _address = new Address();
+        }
         public virtual Customer Customer { get; set; }
         public long? CustomerId { get; set; }
-        public Address Address { get; set; }
+        Address _address;
+        [NotMapped]
+        public Address Address {
+            get {
+                AddressHelper.UpdateAddress(_address, Address_Line, Address_City, Address_State, Address_ZipCode, Address_Latitude, Address_Longitude);
+                return _address;
+            }
+            set {
+                AddressHelper.UpdateAddress(_address, value.Line, value.City, value.State, value.ZipCode, value.Latitude, value.Longitude);
+                Address_Line = _address.Line;
+                Address_City = _address.City;
+                Address_State = _address.State;
+                Address_ZipCode = _address.ZipCode;
+                Address_Latitude = _address.Latitude;
+                Address_Longitude = _address.Longitude;
+            }
+        }
+        #region EFCore
+        public string Address_Line { get; set; }
+        public string Address_City { get; set; }
+        public StateEnum Address_State { get; set; }
+        public string Address_ZipCode { get; set; }
+        public double Address_Latitude { get; set; }
+        public double Address_Longitude { get; set; }
+        #endregion
         public string Phone { get; set; }
         public string Fax { get; set; }
         public int TotalEmployees { get; set; }

@@ -94,12 +94,12 @@ namespace DevExpress.DevAV.Reports.Spreadsheet {
             var store = GetStore(order, source);
             if(customer != null) {
                 invoice.Cells[FindLeftCell(CellsKind.ShippingCustomerName)].Value = customer.Name;
-                //invoice.Cells[FindLeftCell(CellsKind.CustomerStreetLine)].Value = customer.HomeOffice.Line;
-                //invoice.Cells[FindLeftCell(CellsKind.CustomerCityLine)].Value = customer.HomeOffice.CityLine;
+                invoice.Cells[FindLeftCell(CellsKind.CustomerStreetLine)].Value = customer.HomeOffice.Line;
+                invoice.Cells[FindLeftCell(CellsKind.CustomerCityLine)].Value = customer.HomeOffice.CityLine;
             }
             if(store != null) {
-                //invoice.Cells[FindLeftCell(CellsKind.CustomerStoreStreetLine)].Value = store.Address.Line;
-                //invoice.Cells[FindLeftCell(CellsKind.CustomerStoreCityLine)].Value = store.Address.CityLine;
+                invoice.Cells[FindLeftCell(CellsKind.CustomerStoreStreetLine)].Value = store.Address.Line;
+                invoice.Cells[FindLeftCell(CellsKind.CustomerStoreCityLine)].Value = store.Address.CityLine;
             }
         }
         public static OrderCellInfo FindCell(CellsKind cell) {

@@ -6,7 +6,6 @@ using DevExpress.Common;
 using DevExpress.DataAnnotations;
 
 namespace DevExpress.DevAV {
-    //comment example
     [NotMapped]
     public partial class Address : IDataErrorInfo {
         [Display(Name = "Address")]
@@ -45,5 +44,13 @@ namespace DevExpress.DevAV {
             Latitude = 34.1532866,
             Longitude = -118.2555815
         };
+        public static void UpdateAddress(Address address, string line, string city, StateEnum state, string zipCode, double latitude, double longtitude){
+            address.Line = line;
+            address.City = city;
+            address.State = state;
+            address.ZipCode = zipCode;
+            address.Latitude = latitude;
+            address.Longitude = longtitude;
+        }
     }
 }

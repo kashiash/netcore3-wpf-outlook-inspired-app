@@ -66,15 +66,7 @@
             </dxr:RibbonControl>
             <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom"/>
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="400"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <dxm:MapControl Grid.RowSpan="2" Name="mapControl" CenterPoint="{Binding CenterPoint}">
+                <dxm:MapControl Name="mapControl" CenterPoint="{Binding CenterPoint}">
                     <dxmvvm:Interaction.Behaviors>
                         <local:MapPushpinsService/>
                     </dxmvvm:Interaction.Behaviors>
@@ -128,32 +120,6 @@
                         </dxm:InformationLayer.DataProvider>
                     </dxm:InformationLayer>
                 </dxm:MapControl>
-                <Border BorderThickness="0,0,0,1" BorderBrush="Gray" Grid.Column="1">
-                    <Grid Margin="0,1,0,5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Border Grid.RowSpan="2" Width="64" Height="64" DockPanel.Dock="Left" BorderThickness="1" BorderBrush="Gray" Background="White" Margin="5,4,10,0">
-                            <Image Source="{Binding Order.Customer.Logo}" Stretch="Fill"/>
-                        </Border>
-                        <TextBlock Grid.Column="1" TextBlock.FontSize="22" Text="{Binding Order.Customer.Name}"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" TextBlock.FontSize="14" Text="{Binding Order.InvoiceNumber, StringFormat=INVOICE # {0}}"/>
-                    </Grid>
-                </Border>
-                <dxpdf:PdfViewerControl Grid.Row="1" Grid.Column="1" ShowStartScreen="False" ResetSettingsOnDocumentClose="False"
-                                        CommandBarStyle="None" x:Name="pdfViewer" ZoomMode="PageLevel" CursorMode="MarqueeZoom">
-                    <dxmvvm:Interaction.Behaviors>
-                        <common:WatermarkBehavior DocumentSource="{Binding PdfStream}" Text="{Binding ShipmentText}"/>
-                    </dxmvvm:Interaction.Behaviors>
-                    <dxpdf:PdfViewerControl.ThumbnailsViewerSettings>
-                        <dxpdf:PdfThumbnailsViewerSettings HideThumbnailsViewer="True"/>
-                    </dxpdf:PdfViewerControl.ThumbnailsViewerSettings>
-                </dxpdf:PdfViewerControl>
             </Grid>
         </DockPanel>
     </Grid>
