@@ -79,14 +79,9 @@
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Actions">
                             <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
-                            <dxb:BarSubItem Content="Print" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}">
-                                <dxb:BarButtonItem Content="Order Detail" Command="{Binding PrintOrderDetailCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductOrderDetail.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductOrderDetail.svg'}"/>
-                                <dxb:BarButtonItem Content="Sales Summary" Command="{Binding PrintSalesSummaryCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesSummary2.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesSummary2.svg'}"/>
-                                <dxb:BarButtonItem Content="Specification Summary" Command="{Binding PrintSpecificationSummaryCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductSpecificationsSummary.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/ProductSpecificationsSummary.svg'}"/>
-                            </dxb:BarSubItem>
-                            <dxb:BarButtonItem Content="Sales Analysis" Command="{Binding ShowAnalysisCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/CostAnalysis.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/CostAnalysis.svg'}"/>
+                            <dxb:BarButtonItem Content="Sales Analysis" IsEnabled="False" Command="{Binding ShowAnalysisCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/CostAnalysis.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/CostAnalysis.svg'}"/>
                         </dxr:RibbonPageGroup>
-                        <dxr:RibbonPageGroup Caption="Quick Reports">
+                        <dxr:RibbonPageGroup Caption="Quick Reports" IsEnabled="False">
                             <dxr:RibbonGalleryBarItem Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/SalesInvoise2.svg'}" Content="Quick Reports">
                                 <dxr:RibbonGalleryBarItem.Gallery>
                                     <dxb:Gallery MinColCount="2" ColCount="2" ItemGlyphSize="16,16" IsItemDescriptionVisible="False" IsItemCaptionVisible="True" IsGroupCaptionVisible="False" AllowFilter="False" SizeMode="None">
@@ -203,7 +198,7 @@
                                         </dxg:TableView>
                                     </dxg:GridControl.View>
                                     <dxg:GridControl.Columns>
-                                        <dxg:GridColumn IsSmart="True" FieldName="Name" Header="PRODUCT NAME" Width="175"/>
+                                        <dxg:GridColumn IsSmart="True" FieldName="Name" Header="PRODUCT NAME"/>
                                         <dxg:GridColumn IsSmart="True" Header="COST" FieldName="Cost"/>
                                         <dxg:GridColumn IsSmart="True" Header="SALE PRICE" FieldName="SalePrice"/>
                                         <dxg:GridColumn IsSmart="True" Header="RETAIL PRICE" FieldName="RetailPrice" SortOrder="Ascending"/>

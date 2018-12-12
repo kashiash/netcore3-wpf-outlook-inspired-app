@@ -124,15 +124,6 @@ namespace DevExpress.DevAV.ViewModels {
         public void CreateCustomFilter() {
             Messenger.Default.Send(new CreateCustomFilterMessage<Employee>());
         }
-
-        public void AddTask() {
-            Action<EmployeeTask> initializer = x => x.OwnerId = SelectedEntity.Id;
-            EmployeeTaskDetailsCollectionViewModel.LastSelectedEmployeeId = SelectedEntity.Id;
-            IDocument document = this.GetRequiredService<IDocumentManagerService>().CreateDocument("EmployeeTaskView", null, initializer, this);
-            document.Show();
-            EmployeeTaskDetailsCollectionViewModel.LastSelectedEmployeeId = null;
-            this.Refresh();
-        }
         public bool CanAddTask() {
             return SelectedEntity != null;
         }

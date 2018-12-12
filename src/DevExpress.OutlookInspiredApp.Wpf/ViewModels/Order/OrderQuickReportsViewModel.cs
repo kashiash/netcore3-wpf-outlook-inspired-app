@@ -34,21 +34,22 @@ namespace DevExpress.DevAV.ViewModels {
 
         public virtual void OnLoaded() {
             var documentStream = new MemoryStream();
-            /*var report = ReportFactory.SalesInvoice(SelectedOrder, true, false, false, false);            
-            switch(Format) {
-                case ReportFormat.Pdf:
-                    report.ExportToPdf(documentStream);
-                    break;
-                case ReportFormat.Xls:                    
-                    report.ExportToXls(documentStream);
-                    break;
-                case ReportFormat.Doc:
-                    var options = new XtraPrinting.DocxExportOptions();
-                    options.ExportMode = XtraPrinting.DocxExportMode.SingleFilePageByPage;
-                    options.TableLayout = true;
-                    report.ExportToDocx(documentStream, options);
-                    break;
-            }*/
+            //var report = ReportFactory.SalesInvoice(SelectedOrder, true, false, false, false);
+            //switch (Format)
+            //{
+            //    case ReportFormat.Pdf:
+            //        report.ExportToPdf(documentStream);
+            //        break;
+            //    case ReportFormat.Xls:
+            //        report.ExportToXls(documentStream);
+            //        break;
+            //    case ReportFormat.Doc:
+            //        var options = new XtraPrinting.DocxExportOptions();
+            //        options.ExportMode = XtraPrinting.DocxExportMode.SingleFilePageByPage;
+            //        options.TableLayout = true;
+            //        report.ExportToDocx(documentStream, options);
+            //        break;
+            //}
             DocumentDataSource = new Tuple<IDevAVDbUnitOfWork, Order>(null, SelectedOrder);
             DocumentStream = documentStream;
         }

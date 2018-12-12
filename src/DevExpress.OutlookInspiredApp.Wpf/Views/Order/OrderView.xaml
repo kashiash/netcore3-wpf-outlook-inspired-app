@@ -127,9 +127,9 @@
                                   Ribbon="{Binding ElementName=ribbonControl, Mode=OneTime}" 
                                   dx:ScrollBarExtensions.ScrollBarMode="Standard"
                                   CellTemplateSelector="{StaticResource CellTemplateSelector}">
-                <!--<dxmvvm:Interaction.Behaviors>
+                <dxmvvm:Interaction.Behaviors>
                     <local:InvoiceEditBehavior SpreadsheetDataSource="{Binding SpreadsheetDataSource}"/>
-                </dxmvvm:Interaction.Behaviors>-->
+                </dxmvvm:Interaction.Behaviors>
             </dxsps:SpreadsheetControl>
         </DockPanel>
     </dxb:BarManager>

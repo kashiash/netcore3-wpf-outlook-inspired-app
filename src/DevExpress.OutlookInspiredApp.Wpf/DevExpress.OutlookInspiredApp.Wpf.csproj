@@ -9,11 +9,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>..\..\bin\</OutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Behaviors\InvoiceEditBehavior.cs" />
-  </ItemGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\bin\</OutputPath>
+  </PropertyGroup>
+  
+  
   <ItemGroup>
     <None Remove="Resources\About.svg" />
     <None Remove="Resources\Active.svg" />
@@ -167,6 +167,7 @@
     <None Remove="Resources\RibbonStyle\TabletOffice.svg" />
     <None Remove="Resources\SalesAnalysis.svg" />
     <None Remove="Resources\SalesInvoice.svg" />
+    <None Remove="Resources\SalesInvoice.xltx" />
     <None Remove="Resources\SalesInvoise2.svg" />
     <None Remove="Resources\SalesPeriodLifetime.svg" />
     <None Remove="Resources\SalesPeriodMonth.svg" />
@@ -781,6 +782,9 @@
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SalesInvoice.xltx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -792,225 +796,234 @@
 
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Charts.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Charts.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Data.v18.2">
-      <HintPath>..\..\bin\DevExpress.Data.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Data.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.DevAV">
-      <HintPath>..\DevExpress.DevAV\bin\Debug\netstandard2.0\DevExpress.DevAV.dll</HintPath>
+      <HintPath>..\..\bin\netstandard2.0\DevExpress.DevAV.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Docs.v18.2">
-      <HintPath>..\..\bin\DevExpress.Docs.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Docs.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Images.v18.2">
-      <HintPath>..\..\bin\DevExpress.Images.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Images.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Map.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Map.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Map.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v18.2">
-      <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Mvvm.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v18.2.DataModel">
-      <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.DataModel.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Mvvm.v18.2.DataModel.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v18.2.DataModel.EFCore">
-      <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.DataModel.EFCore.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Mvvm.v18.2.DataModel.EFCore.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v18.2.ViewModel">
-      <HintPath>..\..\bin\DevExpress.Mvvm.v18.2.ViewModel.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Mvvm.v18.2.ViewModel.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Office.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Office.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Office.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Pdf.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Pdf.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Pdf.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Pdf.v18.2.Drawing">
-      <HintPath>..\..\bin\DevExpress.Pdf.v18.2.Drawing.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Pdf.v18.2.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.PivotGrid.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.PivotGrid.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.PivotGrid.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Printing.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Printing.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Printing.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.RichEdit.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.RichEdit.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v18.2.Export">
-      <HintPath>..\..\bin\DevExpress.RichEdit.v18.2.Export.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.RichEdit.v18.2.Export.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.SpellChecker.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.SpellChecker.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.SpellChecker.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Spreadsheet.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Spreadsheet.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Spreadsheet.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Accordion.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Accordion.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Accordion.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Charts.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Charts.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Charts.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Controls.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Controls.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Controls.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Core.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Core.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Core.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.DemoBase.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.DemoBase.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.DemoBase.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Docking.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Docking.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Docking.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.DocumentViewer.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Xpf.DocumentViewer.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.DocumentViewer.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.ExpressionEditor.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.ExpressionEditor.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.ExpressionEditor.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Gauges.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Gauges.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Gauges.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Grid.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Grid.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Grid.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Grid.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Xpf.Grid.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Grid.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Grid.v18.2.Extensions">
-      <HintPath>..\..\bin\DevExpress.Xpf.Grid.v18.2.Extensions.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Grid.v18.2.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Layout.v18.2.Core">
-      <HintPath>..\..\bin\DevExpress.Xpf.Layout.v18.2.Core.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Layout.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.LayoutControl.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.LayoutControl.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.LayoutControl.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Map.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Map.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Map.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.PdfViewer.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.PdfViewer.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.PdfViewer.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.PivotGrid.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.PivotGrid.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.PivotGrid.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Printing.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Printing.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Printing.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.ReportDesigner.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.ReportDesigner.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.ReportDesigner.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Ribbon.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Ribbon.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Ribbon.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.RichEdit.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.RichEdit.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.RichEdit.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.SpellChecker.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.SpellChecker.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.SpellChecker.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Spreadsheet.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Spreadsheet.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Spreadsheet.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.DXStyle.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.DXStyle.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.DXStyle.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.LightGray.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.LightGray.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.LightGray.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.MetropolisDark.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.MetropolisDark.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.MetropolisLight.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.MetropolisLight.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2007Black.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2007Black.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2007Black.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2007Blue.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2007Blue.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2007Blue.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2007Silver.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2007Silver.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2007Silver.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2010Black.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2010Black.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2010Black.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2010Blue.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2010Blue.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2010Blue.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2010Silver.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2010Silver.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2010Silver.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2013.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2013.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2013.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2013DarkGray.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2013DarkGray.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2013DarkGray.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2013LightGray.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2013LightGray.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2013LightGray.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016Black.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016Black.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016Black.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016BlackSE.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016BlackSE.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016BlackSE.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016Colorful.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016Colorful.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016Colorful.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016ColorfulSE.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016ColorfulSE.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016ColorfulSE.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016DarkGraySE.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016DarkGraySE.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016DarkGraySE.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016White.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016White.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016White.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Office2016WhiteSE.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Office2016WhiteSE.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Office2016WhiteSE.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Seven.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Seven.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Seven.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.Super.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.Super.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.Super.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.TouchlineDark.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.TouchlineDark.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.TouchlineDark.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.VS2010.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.VS2010.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.VS2010.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.VS2017Blue.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.VS2017Blue.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.VS2017Blue.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.VS2017Dark.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.VS2017Dark.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.VS2017Dark.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.VS2017Light.v18.2">
-      <HintPath>..\..\bin\DevExpress.Xpf.Themes.VS2017Light.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.VS2017Light.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraReports.v18.2">
-      <HintPath>..\..\bin\DevExpress.XtraReports.v18.2.dll</HintPath>
+      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.XtraReports.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\bin\EntityFramework.dll</HintPath>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\..\bin\System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.SQLite.EF6">
-      <HintPath>..\..\bin\System.Data.SQLite.EF6.dll</HintPath>
-    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -1059,15 +1072,6 @@
     <Page Update="Views\Employee\EmployeePanelView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Views\Employee\EmployeeTaskCollectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Employee\EmployeeTaskDetailView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Employee\EmployeeTaskView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Update="Views\Employee\EmployeeView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1089,9 +1093,6 @@
     <Page Update="Views\Order\OrderMapView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Views\Order\OrderPdfQuickReportView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Update="Views\Order\OrderRevenueReportView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1108,12 +1109,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Views\Product\ProductCollectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Quote\QuoteCollectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Quote\QuoteMapView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Views\ReportDesignerView.xaml">

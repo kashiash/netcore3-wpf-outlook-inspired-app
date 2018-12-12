@@ -158,22 +158,6 @@
     &lt;Name&gt;All&lt;/Name&gt;
   &lt;/FilterInfo&gt;
   &lt;FilterInfo&gt;
-    &lt;Name&gt;Today&lt;/Name&gt;
-    &lt;FilterCriteria&gt;IsOutlookIntervalToday([OrderDate])&lt;/FilterCriteria&gt;
-  &lt;/FilterInfo&gt;
-  &lt;FilterInfo&gt;
-    &lt;Name&gt;Yesterday&lt;/Name&gt;
-    &lt;FilterCriteria&gt;IsOutlookIntervalYesterday([OrderDate])&lt;/FilterCriteria&gt;
-  &lt;/FilterInfo&gt;
-  &lt;FilterInfo&gt;
-    &lt;Name&gt;This Month&lt;/Name&gt;
-    &lt;FilterCriteria&gt;IsOutlookIntervalEarlierThisMonth([OrderDate])&lt;/FilterCriteria&gt;
-  &lt;/FilterInfo&gt;
-  &lt;FilterInfo&gt;
-    &lt;Name&gt;This Year&lt;/Name&gt;
-    &lt;FilterCriteria&gt;IsOutlookIntervalEarlierThisYear([OrderDate])&lt;/FilterCriteria&gt;
-  &lt;/FilterInfo&gt;
-  &lt;FilterInfo&gt;
     &lt;Name&gt;Unpaid Orders&lt;/Name&gt;
     &lt;FilterCriteria&gt;[PaymentTotal] = 0.0m&lt;/FilterCriteria&gt;
   &lt;/FilterInfo&gt;
@@ -192,10 +176,6 @@
   &lt;FilterInfo&gt;
     &lt;Name&gt;Last Year&lt;/Name&gt;
     &lt;FilterCriteria&gt;GetYear([Date])=(GetYear(LocalDateTimeNow())-1)&lt;/FilterCriteria&gt;
-  &lt;/FilterInfo&gt;
-  &lt;FilterInfo&gt;
-    &lt;Name&gt;This Year&lt;/Name&gt;
-    &lt;FilterCriteria&gt;IsOutlookIntervalEarlierThisYear([Date])&lt;/FilterCriteria&gt;
   &lt;/FilterInfo&gt;
 &lt;/ArrayOfFilterInfo&gt;</Value>
     </Setting>

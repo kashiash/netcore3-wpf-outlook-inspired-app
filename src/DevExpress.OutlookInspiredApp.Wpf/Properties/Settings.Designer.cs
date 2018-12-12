@@ -12,7 +12,7 @@ namespace DevExpress.DevAV.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -252,22 +252,6 @@ namespace DevExpress.DevAV.Properties {
     <Name>All</Name>
   </FilterInfo>
   <FilterInfo>
-    <Name>Today</Name>
-    <FilterCriteria>IsOutlookIntervalToday([OrderDate])</FilterCriteria>
-  </FilterInfo>
-  <FilterInfo>
-    <Name>Yesterday</Name>
-    <FilterCriteria>IsOutlookIntervalYesterday([OrderDate])</FilterCriteria>
-  </FilterInfo>
-  <FilterInfo>
-    <Name>This Month</Name>
-    <FilterCriteria>IsOutlookIntervalEarlierThisMonth([OrderDate])</FilterCriteria>
-  </FilterInfo>
-  <FilterInfo>
-    <Name>This Year</Name>
-    <FilterCriteria>IsOutlookIntervalEarlierThisYear([OrderDate])</FilterCriteria>
-  </FilterInfo>
-  <FilterInfo>
     <Name>Unpaid Orders</Name>
     <FilterCriteria>[PaymentTotal] = 0.0m</FilterCriteria>
   </FilterInfo>
@@ -295,10 +279,6 @@ namespace DevExpress.DevAV.Properties {
   <FilterInfo>
     <Name>Last Year</Name>
     <FilterCriteria>GetYear([Date])=(GetYear(LocalDateTimeNow())-1)</FilterCriteria>
-  </FilterInfo>
-  <FilterInfo>
-    <Name>This Year</Name>
-    <FilterCriteria>IsOutlookIntervalEarlierThisYear([Date])</FilterCriteria>
   </FilterInfo>
 </ArrayOfFilterInfo>")]
         public global::DevExpress.DevAV.ViewModels.FilterInfoList QuotesStaticFilters {

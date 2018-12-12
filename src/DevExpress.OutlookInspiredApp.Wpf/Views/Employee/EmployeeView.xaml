@@ -108,14 +108,7 @@
                                 LargeGlyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" />
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Actions" IsEnabled="{Binding Entity.Id, Converter={dxmvvm:NumericToBooleanConverter}}" >
-                        <dxb:BarSubItem Content="Print" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}">
-                            <dxb:BarButtonItem Content="Employee Profile" Command="{Binding PrintEmployeeProfileCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/EmployeeProfile.svg'}"/>
-                            <dxb:BarButtonItem Content="Summary Report" Command="{Binding PrintSummaryReportCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/EmployeeSummary.svg'}"/>
-                            <dxb:BarButtonItem Content="Directory" Command="{Binding PrintDirectoryCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/EmployeeDirectory.svg'}"/>
-                            <dxb:BarButtonItem Content="Task List" Command="{Binding PrintTaskListCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/TaskList.svg'}"/>
-                        </dxb:BarSubItem>
                         <dxb:BarButtonItem Content="Meeting" Command="{Binding ShowSchedulerCommand}" CommandParameter="Meeting" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Meeting.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Meeting.svg'}"/>
-                        <dxb:BarButtonItem Content="Task" Command="{Binding EmployeeAssignedTasksDetails.NewCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Task.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Task.svg'}"/>
                         <dxb:BarButtonItem Content="Mail Merge" Command="{Binding QuickLetter.ShowMailMergeCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/MailMerge.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/MailMerge.svg'}"/>
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Quick Letter">
@@ -350,15 +343,14 @@
                         </Style.Triggers>
                     </Style>
                 </dxlc:LayoutItem.Style>
-                <dxg:GridControl ItemsSource="{Binding EmployeeAssignedTasksDetails.Entities}" SelectedItem="{Binding EmployeeAssignedTasksDetails.SelectedEntity}" 
-                                 SelectionMode="None">
-                    <dxmvvm:Interaction.Behaviors>
+                <dxg:GridControl  SelectionMode="None">
+                    <!--<dxmvvm:Interaction.Behaviors>
                         <dxmvvm:EventToCommand PassEventArgsToCommand="True" Command="{Binding EmployeeAssignedTasksDetails.EditCommand}" EventName="MouseDoubleClick">
                             <dxmvvm:EventToCommand.EventArgsConverter>
                                 <dx:EventArgsToDataRowConverter/>
                             </dxmvvm:EventToCommand.EventArgsConverter>
                         </dxmvvm:EventToCommand>
-                    </dxmvvm:Interaction.Behaviors>
+                    </dxmvvm:Interaction.Behaviors>-->
                     <dxg:GridControl.Resources>
                         <dxmvvm:ObjectToObjectConverter x:Key="PriorityToPictureConverter">
                             <dxmvvm:MapItem Source="Low" Target="{dx:SvgImageSource Size='16,16', Uri='/Resources/Priority/LowPriority.svg'}"/>
@@ -397,13 +389,6 @@
                                     <TextBlock Text="{Binding Path=Row.Description}" Margin="3,0" TextWrapping="WrapWithOverflow" />
                                 </DataTemplate>
                             </dxg:TableView.RowDetailsTemplate>
-                            <dxg:TableView.RowCellMenuCustomizations>
-                                <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.EmployeeAssignedTasksDetails.NewCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/NewTask.svg'}"/>
-                                <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EmployeeAssignedTasksDetails.EditCommand}" CommandParameter="{Binding Row.Row}"  Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
-                                <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.EmployeeAssignedTasksDetails.DeleteCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}"/>
-                                <dxb:BarItemSeparator/>
-                                <dxb:BarButtonItem Content="Assign Task" Command="{Binding View.DataContext.EmployeeAssignedTasksDetails.AssignTaskCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:SvgImageSource Uri='/Resources/AssignTask.svg'}"/>
-                            </dxg:TableView.RowCellMenuCustomizations>
                         </dxg:TableView>
                     </dxg:GridControl.View>
                 </dxg:GridControl>

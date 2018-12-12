@@ -43,21 +43,15 @@
             <dxmvvm:TaskbarThumbButtonInfo ImageSource="{dx:SvgImageSource Uri='/Resources/Modules/Employees.svg'}"
                                                Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[0]}"
                                                Description="Employees"/>
-            <dxmvvm:TaskbarThumbButtonInfo ImageSource="{dx:SvgImageSource Uri='/Resources/Modules/Tasks.svg'}"
-                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[1]}"
-                                               Description="Tasks"/>
             <dxmvvm:TaskbarThumbButtonInfo ImageSource="{dx:SvgImageSource Uri='/Resources/Modules/Customers.svg'}"
-                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[2]}"
+                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[1]}"
                                                Description="Customers"/>
             <dxmvvm:TaskbarThumbButtonInfo ImageSource="{dx:SvgImageSource Uri='/Resources/Modules/Products.svg'}"
-                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[3]}"
+                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[2]}"
                                                Description="Products"/>
             <dxmvvm:TaskbarThumbButtonInfo ImageSource="{dx:SvgImageSource Uri='/Resources/Modules/Sales.svg'}"
-                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[4]}"
+                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[3]}"
                                                Description="Sales"/>
-            <dxmvvm:TaskbarThumbButtonInfo ImageSource="{dx:SvgImageSource Uri='/Resources/Modules/Opportunities.svg'}"
-                                               Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[5]}"
-                                               Description="Opportunities"/>
         </dxmvvm:TaskbarButtonService>
         <dx:WindowedDocumentUIService DocumentShowMode="Dialog" WindowType="dx:ThemedWindow" x:Name="AnalysisWindowedDocumentUIService">
             <dx:WindowedDocumentUIService.WindowStyle>
@@ -173,9 +167,9 @@
                             <dxb:BarButtonItem x:Name="BuyNowBarButtonItem" Content="Buy Now" RibbonStyle="Large" Command="{Binding LinksViewModel.BuyNowCommand}"
                                         Glyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"
                                         LargeGlyph="{dx:SvgImageSource Uri='/Resources/Buy.svg'}"/>
-                            <dxb:BarButtonItem x:Name="AboutBarButtonItem" Content="About" RibbonStyle="Large" Command="{Binding LinksViewModel.AboutCommand}"
+                            <!--<dxb:BarButtonItem x:Name="AboutBarButtonItem" Content="About" RibbonStyle="Large" Command="{Binding LinksViewModel.AboutCommand}"
                                         Glyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"
-                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"/>
+                                        LargeGlyph="{dx:SvgImageSource Uri='/Resources/About.svg'}"/>-->
                         </dxr:RibbonPageGroup>
                     </dxr:RibbonPage>
                     <dxr:RibbonPage Caption="View" MergeType="Replace">
@@ -184,16 +178,12 @@
                                                 Glyph="{dx:SvgImageSource Uri='/Resources/Navigation.svg'}">
                                 <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[0]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Employees.svg'}" 
                                                       LargeGlyph="{dx:SvgImageSource Uri='/Resources/Modules/Employees.svg'}" Content="EMPLOYEES"/>
-                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[1]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Tasks.svg'}" 
-                                                      LargeGlyph="{dx:SvgImageSource Uri='/Resources/Modules/Tasks.svg'}" Content="TASKS"/>
-                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[2]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Customers.svg'}"
+                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[1]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Customers.svg'}"
                                                       LargeGlyph="{dx:SvgImageSource Uri='/Resources/Modules/Customers.svg'}" Content="CUSTOMERS"/>
-                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[3]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Products.svg'}"
+                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[2]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Products.svg'}"
                                                       LargeGlyph="{dx:SvgImageSource Uri='/Resources/Modules/Products.svg'}" Content="PRODUCTS"/>
-                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[4]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Sales.svg'}"
+                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[3]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Sales.svg'}"
                                                       LargeGlyph="{dx:SvgImageSource Uri='/Resources/Modules/Sales.svg'}" Content="SALES"/>
-                                <dxb:BarCheckItem GroupIndex="3" Command="{Binding ShowCommand}" CommandParameter="{Binding Modules[5]}" Glyph="{dx:SvgImageSource Uri='/Resources/Modules/Opportunities.svg'}"
-                                                      LargeGlyph="{dx:SvgImageSource Uri='/Resources/Modules/Opportunities.svg'}" Content="OPPORTUNITIES"/>
                             </dxb:BarSubItem>
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Layout" MergeOrder="1">
@@ -225,9 +215,6 @@
                 </dxr:RibbonStatusBarControl.RightItems>
             </dxr:RibbonStatusBarControl>
             <dxdo:DockLayoutManager BorderThickness="0" Name="dockLayoutManager">
-                <!--<dxmvvm:Interaction.Behaviors>
-                    <common:WorkspaceRegionBehavior Id="Root" />
-                </dxmvvm:Interaction.Behaviors>-->
                 <dxdo:LayoutGroup Orientation="Vertical" ItemHeight="*">
                     <dxdo:LayoutGroup>
                         <dxmvvm:Interaction.Behaviors>

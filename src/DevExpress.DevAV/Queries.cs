@@ -305,7 +305,7 @@ namespace DevExpress.DevAV {
                 InvoiceNumber = x.InvoiceNumber,
                 OrderDate = x.OrderDate,
                 Company = x.Customer.Name,
-                Store = x.Customer.HomeOffice.City,
+                //Store = x.Customer.HomeOffice.City,
                 TotalAmount = x.TotalAmount,
             }).ToList();
         }

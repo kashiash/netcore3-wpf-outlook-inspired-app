@@ -15,8 +15,8 @@
     </dxmvvm:Interaction.Behaviors>
 
     <dxsps:SpreadsheetControl x:Name="spreadsheetControl" CommandBarStyle="Ribbon" dx:ScrollBarExtensions.ScrollBarMode="Standard">
-        <!--<dxmvvm:Interaction.Behaviors>
+        <dxmvvm:Interaction.Behaviors>
             <local:InvoiceEditBehavior SpreadsheetDataSource="{Binding DocumentDataSource, Mode=OneWay}"/>
-        </dxmvvm:Interaction.Behaviors>-->
+        </dxmvvm:Interaction.Behaviors>
     </dxsps:SpreadsheetControl>
 </UserControl>

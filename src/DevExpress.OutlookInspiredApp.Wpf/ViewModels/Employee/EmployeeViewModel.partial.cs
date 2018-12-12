@@ -5,33 +5,12 @@ using DevExpress.Mvvm.POCO;
 
 namespace DevExpress.DevAV.ViewModels {
     partial class EmployeeViewModel {
-        EmployeeContactsViewModel contacts;
         EmployeeQuickLetterViewModel quickLetter;
         LinksViewModel linksViewModel;
-        EmployeeTaskDetailsCollectionViewModel employeeAssignedTasksDetails;
-        public EmployeeContactsViewModel Contacts {
-            get {
-                if(contacts == null) {
-                    contacts = EmployeeContactsViewModel.Create().SetParentViewModel(this);
-                }
-                return contacts;
-            }
-        }
-        public EmployeeTaskDetailsCollectionViewModel EmployeeAssignedTasksDetails {
-            get {
-                return null;
-             //   if(employeeAssignedTasksDetails == null) {
-             //       employeeAssignedTasksDetails = EmployeeTaskDetailsCollectionViewModel.Create().SetParentViewModel(this);
-              //  }
-             //   return employeeAssignedTasksDetails;
-            }
-        }
         protected override void OnEntityChanged() {
             base.OnEntityChanged();
-            Contacts.Entity = Entity;
             QuickLetter.Entity = Entity;
             SetDefaultReport(ReportInfoFactory.EmployeeProfile(Entity));
-            //EmployeeAssignedTasksDetails.UpdateFilter();
             if(Entity != null)
                 Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Edit Employee: {0}", 
                     string.IsNullOrEmpty(Entity.FullName) ? "<New>" : Entity.FullName));

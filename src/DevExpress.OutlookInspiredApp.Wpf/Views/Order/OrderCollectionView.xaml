@@ -126,36 +126,25 @@
                                    LargeGlyph="{dx:SvgImageSource Uri='/Resources/NewOrder.svg'}"
                                    Glyph="{dx:SvgImageSource Uri='/Resources/NewOrder.svg'}"/>
                         </dxr:RibbonPageGroup>
-                        <dxr:RibbonPageGroup Caption="Actions">
-                            <dxb:BarSubItem Content="Print" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}">
-                                <dxb:BarButtonItem Content="Invoice" Command="{Binding PrintInvoiceCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoice.svg'}"/>
-                                <dxb:BarButtonItem Content="Summary Report" Command="{Binding PrintSummaryReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesSummary.svg'}"/>
-                                <dxb:BarButtonItem Content="Sales Analysis" Command="{Binding PrintSalesAnalysisReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
-                            </dxb:BarSubItem>
-                        </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Quick Reports" ShowCaptionButton="True">
                             <dxr:RibbonGalleryBarItem x:Name="QuickReportsRibbonGalleryBarItem" Glyph="{dx:SvgImageSource Size='16,16', Uri='/Resources/SalesInvoise2.svg'}" Content="Quick Reports">
                                 <dxr:RibbonGalleryBarItem.DropDownGallery>
                                     <dxb:Gallery MinColCount="2" ColCount="2" ItemGlyphSize="16,16" IsItemDescriptionVisible="False" IsItemCaptionVisible="True" IsGroupCaptionVisible="False" AllowFilter="False" SizeMode="None">
                                         <dxb:GalleryItemGroup>
-                                            <dxb:GalleryItem Caption="Revenue Report" Command="{Binding ShowRevenueReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
-                                            <dxb:GalleryItem Caption="Revenue Analysis" Command="{Binding ShowRevenueAnalysisReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}" />
                                             <dxb:GalleryItem Caption="Order Follow-Up" Command="{Binding QuickLetterCommand}" CommandParameter="Sales Order Follow-Up" Glyph="{dx:SvgImageSource Uri='/Resources/ThankYou.svg'}"/>
-                                            <dxb:GalleryItem Caption="Invoice (PDF)" Command="{Binding QuickReportCommand}" CommandParameter="Pdf" Glyph="{dx:SvgImageSource Uri='/Resources/Controls/ExportToPDF.svg'}"/>
                                             <dxb:GalleryItem Caption="Invoice (XLS)" Command="{Binding QuickReportCommand}" CommandParameter="Xls" Glyph="{dx:SvgImageSource Uri='/Resources/Controls/ExportToXlS.svg'}"/>
-                                            <dxb:GalleryItem Caption="Invoice (DOC)" Command="{Binding QuickReportCommand}" CommandParameter="Doc" Glyph="{dx:SvgImageSource Uri='/Resources/Controls/ExportToRTF.svg'}"/>
+                                            <dxb:GalleryItem Caption="Revenue Report" IsEnabled="False" Command="{Binding ShowRevenueReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
+                                            <dxb:GalleryItem Caption="Revenue Analysis" IsEnabled="False" Command="{Binding ShowRevenueAnalysisReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}" />
                                         </dxb:GalleryItemGroup>
                                     </dxb:Gallery>
                                 </dxr:RibbonGalleryBarItem.DropDownGallery>
                                 <dxr:RibbonGalleryBarItem.Gallery>
                                     <dxb:Gallery MinColCount="2" ColCount="2" ItemGlyphSize="16,16" IsItemDescriptionVisible="False" IsItemCaptionVisible="True" IsGroupCaptionVisible="False" AllowFilter="False" SizeMode="None">
                                         <dxb:GalleryItemGroup>
-                                            <dxb:GalleryItem Caption="Revenue Report" Command="{Binding ShowRevenueReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
-                                            <dxb:GalleryItem Caption="Revenue Analysis" Command="{Binding ShowRevenueAnalysisReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}" />
                                             <dxb:GalleryItem Caption="Order Follow-Up" Command="{Binding QuickLetterCommand}" CommandParameter="Sales Order Follow-Up" Glyph="{dx:SvgImageSource Uri='/Resources/ThankYou.svg'}"/>
-                                            <dxb:GalleryItem Caption="Invoice (PDF)" Command="{Binding QuickReportCommand}" CommandParameter="Pdf" Glyph="{dx:SvgImageSource Uri='/Resources/Controls/ExportToPDF.svg'}"/>
                                             <dxb:GalleryItem Caption="Invoice (XLS)" Command="{Binding QuickReportCommand}" CommandParameter="Xls" Glyph="{dx:SvgImageSource Uri='/Resources/Controls/ExportToXlS.svg'}"/>
-                                            <dxb:GalleryItem Caption="Invoice (DOC)" Command="{Binding QuickReportCommand}" CommandParameter="Doc" Glyph="{dx:SvgImageSource Uri='/Resources/Controls/ExportToRTF.svg'}"/>
+                                            <dxb:GalleryItem Caption="Revenue Report" IsEnabled="False"  Command="{Binding ShowRevenueReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
+                                            <dxb:GalleryItem Caption="Revenue Analysis" IsEnabled="False"  Command="{Binding ShowRevenueAnalysisReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}" />
                                         </dxb:GalleryItemGroup>
                                     </dxb:Gallery>
                                 </dxr:RibbonGalleryBarItem.Gallery>
@@ -263,53 +252,20 @@
                                 </dxg:GridControl.GroupSummary>
                             </dxg:GridControl>
                         </dxdo:LayoutPanel>
-                        <dxdo:LayoutPanel AllowSizing="True" ItemWidth="465" ItemHeight="210" AllowClose="False" AllowDrag="False" AllowFloat="False"
-                                                 AllowHide="False" ShowCaption="False" ShowBorder="False" 
+                        <dxdo:LayoutPanel AllowSizing="True" AllowClose="False" AllowDrag="False" AllowFloat="False"
+                                                 AllowHide="False" ShowCaption="False" ShowBorder="False" ItemWidth="Auto"
                                                  Visibility="{Binding ElementName=gridControl, Path=VisibleRowCount, Converter={dxmvvm:NumericToVisibilityConverter HiddenInsteadOfCollapsed=True}}">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Border BorderThickness="0,0,0,1" BorderBrush="Gray" Grid.ColumnSpan="2">
-                                    <Grid Margin="0,1,0,5">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
-                                        <Border Grid.RowSpan="2" Width="64" Height="64" DockPanel.Dock="Left" BorderThickness="1" BorderBrush="Gray" Background="White" Margin="0,0,10,0">
-                                            <Image Source="{Binding SelectedEntity.Customer.Logo}" Stretch="Fill"/>
-                                        </Border>
-                                        <TextBlock Grid.Column="1" TextBlock.FontSize="22" Text="{Binding SelectedEntity.Customer.Name}"/>
-                                        <TextBlock Grid.Row="1" Grid.Column="1" TextBlock.FontSize="14" Text="{Binding SelectedEntity.InvoiceNumber, StringFormat=INVOICE # {0}}"/>
-                                    </Grid>
-                                </Border>
-                                <!--<dxp:DocumentPreviewControl Grid.Row="1" Name="documentViewer" CommandBarStyle="None" CursorMode="HandTool" ShowPageMargins="False">
-                                    <dxmvvm:Interaction.Behaviors>
-                                        <common:DocumentViewerReportService x:Name="DocumentViewerService" />
-                                    </dxmvvm:Interaction.Behaviors>
-                                </dxp:DocumentPreviewControl>-->
-                                <dxb:ToolBarControl Grid.Column="1" Grid.Row="1" Orientation="Vertical" AllowQuickCustomization="False" AllowHide="False" Margin="0,5,0,0">
-                                    <dxb:BarButtonItem Content="Edit Invoice" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" ToolTip="Edit Invoice"/>
-                                    <dxb:BarButtonItem Content="Delete Sale Record" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" ToolTip="Delete Sale Record"/>
-                                    <dxb:BarButtonItem Content="Send Invoice via Email" Command="{Binding MailToCommand}" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:SvgImageSource Uri='/Resources/SendDocumentViaEmail.svg'}" ToolTip="Send Invoice via Email"/>
-                                    <dxb:BarButtonItem Content="Print Invoice" Command="{Binding PrintInvoiceCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" ToolTip="Print Invoice"/>
-                                    <dxb:BarButtonItem Command="{Binding PaidCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/Paid.svg'}" 
+                            <dxb:ToolBarControl HorizontalAlignment="Center" Orientation="Vertical" AllowQuickCustomization="False" AllowHide="False" Margin="0,5,0,0">
+                                <dxb:BarButtonItem Content="Edit Invoice" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" ToolTip="Edit Invoice"/>
+                                <dxb:BarButtonItem Content="Delete Sale Record" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:SvgImageSource Uri='/Resources/Delete.svg'}" ToolTip="Delete Sale Record"/>
+                                <dxb:BarButtonItem Content="Send Invoice via Email" Command="{Binding MailToCommand}" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:SvgImageSource Uri='/Resources/SendDocumentViaEmail.svg'}" ToolTip="Send Invoice via Email"/>
+                                <dxb:BarButtonItem Command="{Binding PaidCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/Paid.svg'}" 
                                                        ToolTip="{Binding SelectedEntity.PaymentTotal, Converter={StaticResource PaidTooltipConverter}}" ToolTipService.ShowOnDisabled="True"/>
-                                    <dxb:BarButtonItem Command="{Binding RefundCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/Refund.svg'}" 
+                                <dxb:BarButtonItem Command="{Binding RefundCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/Refund.svg'}" 
                                                        ToolTip="{Binding SelectedEntity.RefundTotal, Converter={StaticResource RefundTooltipConverter}}" ToolTipService.ShowOnDisabled="True"/>
-                                    <dxb:BarButtonItem Content="Previous Record" Command="{Binding ElementName=gridControl, Path=View.Commands.MovePrevRow}" Glyph="{dx:SvgImageSource Uri='/Resources/PreviousRecord.svg'}" ToolTipService.ShowOnDisabled="True" ToolTip="Previous Record"/>
-                                    <dxb:BarButtonItem Content="Next Record" Command="{Binding ElementName=gridControl, Path=View.Commands.MoveNextRow}" Glyph="{dx:SvgImageSource Uri='/Resources/NextRecord.svg'}" ToolTipService.ShowOnDisabled="True" ToolTip="Next Record"/>
-                                </dxb:ToolBarControl>
-                            </Grid>
+                                <dxb:BarButtonItem Content="Previous Record" Command="{Binding ElementName=gridControl, Path=View.Commands.MovePrevRow}" Glyph="{dx:SvgImageSource Uri='/Resources/PreviousRecord.svg'}" ToolTipService.ShowOnDisabled="True" ToolTip="Previous Record"/>
+                                <dxb:BarButtonItem Content="Next Record" Command="{Binding ElementName=gridControl, Path=View.Commands.MoveNextRow}" Glyph="{dx:SvgImageSource Uri='/Resources/NextRecord.svg'}" ToolTipService.ShowOnDisabled="True" ToolTip="Next Record"/>
+                            </dxb:ToolBarControl>
                         </dxdo:LayoutPanel>
                     </dxdo:LayoutGroup>
                 </dxdo:DockLayoutManager.LayoutRoot>

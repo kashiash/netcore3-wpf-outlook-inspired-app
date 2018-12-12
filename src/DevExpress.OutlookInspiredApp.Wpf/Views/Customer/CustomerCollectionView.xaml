@@ -92,15 +92,9 @@
                         </dxr:RibbonPageGroup>
                         <dxr:RibbonPageGroup Caption="Actions">
                             <dxb:BarButtonItem Content="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Edit.svg'}"/>
-                            <dxb:BarSubItem Content="Print" LargeGlyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/Print.svg'}">
-                                <dxb:BarButtonItem Content="Customer Profile" Command="{Binding PrintCustomerProfileCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/CustomerProfileReport.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/CustomerProfileReport.svg'}"/>
-                                <dxb:BarButtonItem Content="Employees" Command="{Binding PrintDirectoryCommand}" Glyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/CustomerContactDirectory.svg'}" LargeGlyph="{dx:SvgImageSource  Uri='/Resources/PrintItems/CustomerContactDirectory.svg'}"/>
-                                <dxb:BarButtonItem Content="Sales Summary" Command="{Binding PrintOrderSummaryReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesSummary2.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesSummary2.svg'}"/>
-                                <dxb:BarButtonItem Content="Sales Detail" Command="{Binding PrintOrderDetailReportCommand}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesInvoise2.svg'}"/>
-                            </dxb:BarSubItem>
-                            <dxb:BarButtonItem Content="Sales Analysis" Command="{Binding ShowAnalysisCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}"/>
+                            <dxb:BarButtonItem Content="Sales Analysis" IsEnabled="False" Command="{Binding ShowAnalysisCommand}" LargeGlyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}" Glyph="{dx:SvgImageSource Uri='/Resources/SalesAnalysis.svg'}"/>
                         </dxr:RibbonPageGroup>
-                        <dxr:RibbonPageGroup Caption="Quick Reports">
+                        <dxr:RibbonPageGroup Caption="Quick Reports" IsEnabled="False">
                             <dxr:RibbonGalleryBarItem Glyph="{dx:SvgImageSource Uri='/Resources/List.svg'}" Content="Quick Reports">
                                 <dxr:RibbonGalleryBarItem.Gallery>
                                     <dxb:Gallery MinColCount="2" ColCount="2" ItemGlyphSize="16,16" IsItemDescriptionVisible="False" IsItemCaptionVisible="True" IsGroupCaptionVisible="False" AllowFilter="False" SizeMode="None">

@@ -1,9 +1,9 @@
 ﻿using DevExpress.DevAV.Common.ViewModel;
 using DevExpress.DevAV.DevAVDbDataModel;
-using DevExpress.DevAV.Properties;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.ViewModel;
+using DevExpress.DevAV.Properties;
 using System;
 
 namespace DevExpress.DevAV.ViewModels {

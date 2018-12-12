@@ -127,7 +127,7 @@
                 </dxg:GridControl>
             </TabItem>
             <TabItem Header="TASKS">
-                <dxg:GridControl ItemsSource="{Binding Entity.AssignedEmployeeTasks, Mode=OneWay}"  BorderThickness="0">
+                <dxg:GridControl  BorderThickness="0">
                     <dxg:GridControl.View>
                         <dxg:TableView UseLightweightTemplates="None">
                             <dxg:TableView.DataRowTemplate>
