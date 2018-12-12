@@ -28,7 +28,7 @@ namespace DevExpress.DevAV.DevAVDbDataModel {
         public static IUnitOfWorkFactory<IDevAVDbUnitOfWork> GetUnitOfWorkFactory(bool isInDesignTime) {
 			if(isInDesignTime)
                 return new DesignTimeUnitOfWorkFactory<IDevAVDbUnitOfWork>(() => new DevAVDbDesignTimeUnitOfWork());
-            return new DbUnitOfWorkFactory<IDevAVDbUnitOfWork>(() => new DevAVDbUnitOfWork(() => new DevAVDb(@"Data Source=..\..\Data\devav.sqlite3")));
+            return new DbUnitOfWorkFactory<IDevAVDbUnitOfWork>(() => new DevAVDbUnitOfWork(() => new DevAVDb(@"Data Source=devav.sqlite3")));
         }
     }
 }

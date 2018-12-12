@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
@@ -802,7 +803,7 @@
       <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Data.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.DevAV">
-      <HintPath>..\..\bin\netstandard2.0\DevExpress.DevAV.dll</HintPath>
+      <HintPath>..\..\bin\DevExpress.DevAV.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Docs.v18.2">
       <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Docs.v18.2.dll</HintPath>
@@ -1115,5 +1116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-
+  <PropertyGroup>
+    <PostBuildEvent>
+      copy /Y "$(SolutionDir)..\Data\devav.sqlite3" "$(SolutionDir)..\Bin\devav.sqlite3"
+      copy /Y "$(SolutionDir)..\Data\EnglishAlphabet.txt" "$(SolutionDir)..\Bin\EnglishAlphabet.txt"
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>
