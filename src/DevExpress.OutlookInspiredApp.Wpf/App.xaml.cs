@@ -14,16 +14,8 @@ using DevExpress.Xpf.DemoLauncher;
 
 namespace DevExpress.DevAV {
     public partial class App : Application {
-
         protected override void OnStartup(StartupEventArgs e) {
-            ExceptionHelper.Initialize();
- //           AppDomain.CurrentDomain.AssemblyResolve += OnCurrentDomainAssemblyResolve;
-            //DevAVDataDirectoryHelper.LocalPrefix = "WpfOutlookInspiredApp";
-            ImagesAssemblyLoader.Load();
-            Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata(200));
             base.OnStartup(e);
-            ViewLocator.Default = new ViewLocator(typeof(App).Assembly);
-            Theme.TouchlineDark.ShowInThemeSelector = false;
             ApplicationThemeHelper.ApplicationThemeName = Theme.Office2016ColorfulSE.Name;
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             SetCultureInfo();
@@ -38,13 +30,5 @@ namespace DevExpress.DevAV {
             demoUI.DateTimeFormat = new DateTimeFormatInfo();
             Thread.CurrentThread.CurrentUICulture = demoUI;
         }
-        //static Assembly OnCurrentDomainAssemblyResolve(object sender, ResolveEventArgs args) {
-        //    string partialName = DevExpress.Utils.AssemblyHelper.GetPartialName(args.Name).ToLower();
-        //    if(partialName == "entityframework" || partialName == "system.data.sqlite" || partialName == "system.data.sqlite.ef6") {
-        //        string path = Path.Combine(Path.GetDirectoryName(typeof(App).Assembly.Location), partialName + ".dll");
-        //        return Assembly.LoadFrom(path);
-        //    }
-        //    return null;
-        //}
     }
 }
