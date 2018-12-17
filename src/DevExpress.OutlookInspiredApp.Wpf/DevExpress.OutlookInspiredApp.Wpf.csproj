@@ -908,9 +908,6 @@
     <Reference Include="DevExpress.Xpf.Printing.v18.2">
       <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Printing.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpf.ReportDesigner.v18.2">
-      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.ReportDesigner.v18.2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Xpf.Ribbon.v18.2">
       <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Ribbon.v18.2.dll</HintPath>
     </Reference>
@@ -1003,9 +1000,6 @@
     </Reference>
     <Reference Include="DevExpress.Xpf.Themes.VS2017Light.v18.2">
       <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.Xpf.Themes.VS2017Light.v18.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v18.2">
-      <HintPath>C:\Work\2018.2\Bin\Framework4\DevExpress.XtraReports.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>System</HintPath>
@@ -1110,9 +1104,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Views\Product\ProductCollectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\ReportDesignerView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

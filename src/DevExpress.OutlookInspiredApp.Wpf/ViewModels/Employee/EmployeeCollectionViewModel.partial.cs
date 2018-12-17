@@ -60,16 +60,13 @@ namespace DevExpress.DevAV.ViewModels {
         }
 
         public void PrintEmployeeProfile() {
-            ShowReport(ReportInfoFactory.EmployeeProfile(SelectedEntity), "Profile");
         }
         public bool CanPrintEmployeeProfile() {
             return SelectedEntity != null;
         }
         public void PrintSummaryReport() {
-            ShowReport(ReportInfoFactory.EmployeeSummary(Entities), "Summary");
         }
         public void PrintDirectory() {
-            ShowReport(ReportInfoFactory.EmployeeDirectory(Entities), "Directory");
         }
         public void PrintTaskList() {
             //ShowReport(ReportInfoFactory.TaskListReport(CreateUnitOfWork().Tasks.ToList()), "TaskList");
@@ -94,7 +91,6 @@ namespace DevExpress.DevAV.ViewModels {
             QuickLetter.RaisePropertyChanged(x => x.Entity);
             if(SelectedEntity != null)
                 EntityPanelViewModel.Entity = SelectedEntity;
-            SetDefaultReport(ReportInfoFactory.EmployeeProfile(SelectedEntity));
             TableViewSelectedEntity = SelectedEntity;
             CardViewSelectedEntity = SelectedEntity;
         }

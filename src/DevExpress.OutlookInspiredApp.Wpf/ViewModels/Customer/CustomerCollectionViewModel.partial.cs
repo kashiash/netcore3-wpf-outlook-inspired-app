@@ -31,36 +31,30 @@ namespace DevExpress.DevAV.ViewModels {
         }
 
         public void PrintCustomerProfile() {
-            ShowReport(ReportInfoFactory.CusomerProfile(SelectedEntity), "Profile");
         }
         public bool CanPrintCustomerProfile() {
             return SelectedEntity != null;
         }
         public void PrintDirectory() {
-            ShowReport(ReportInfoFactory.CustomerContactsDirectory(SelectedEntity), "ContactsDirectory");
         }
         public bool CanPrintDirectory() {
             return SelectedEntity != null;
         }
         public void PrintOrderDetailReport() {
-            ShowReport(ReportInfoFactory.CustomerSalesDetailReport(QueriesHelper.GetCustomerSaleDetails(SelectedEntity.Id, CreateUnitOfWork().OrderItems)), "SalesDetail");
         }
         public bool CanPrintOrderDetailReport() {
             return SelectedEntity != null;
         }
         public void PrintOrderSummaryReport() {
-            ShowReport(ReportInfoFactory.CustomerSalesSummaryReport(QueriesHelper.GetCustomerSaleOrderItemDetails(SelectedEntity.Id, CreateUnitOfWork().OrderItems)), "SalesSummary");
         }
         public bool CanPrintOrderSummaryReport() {
             return SelectedEntity != null;
         }
         public void PrintLocationsDirectory() {
-            ShowReport(ReportInfoFactory.CustomerLocationsDirectory(Entities), "LocationDirectory");
         }
 
         protected override void OnSelectedEntityChanged() {
             base.OnSelectedEntityChanged();
-            SetDefaultReport(ReportInfoFactory.CusomerProfile(SelectedEntity));
         }
         protected override void OnEntitiesAssigned(Func<Customer> getSelectedEntityCallback) {
             base.OnEntitiesAssigned(getSelectedEntityCallback);

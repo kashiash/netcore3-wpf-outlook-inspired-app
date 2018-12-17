@@ -37,25 +37,21 @@ namespace DevExpress.DevAV.ViewModels {
         }
 
         public void PrintOrderDetail() {
-            ShowReport(ReportInfoFactory.ProductOrders(SelectedEntity.OrderItems, CreateUnitOfWork().States.ToList()), "Orders");
         }
         public bool CanPrintOrderDetail() {
             return SelectedEntity != null;
         }
         public void PrintSpecificationSummary() {
-            ShowReport(ReportInfoFactory.ProductProfile(SelectedEntity), "Profile");
         }
         public bool CanPrintSpecificationSummary() {
             return SelectedEntity != null;
         }
         public void PrintSalesSummary() {
-            ShowReport(ReportInfoFactory.ProductSalesSummary(SelectedEntity.OrderItems), "SalesSummary");
         }
         public bool CanPrintSalesSummary() {
             return SelectedEntity != null;
         }
         public void PrintTopSalesperson() {
-            ShowReport(ReportInfoFactory.ProductTopSalesPerson(SelectedEntity.OrderItems), "TopSalesPerson");
         }
         public bool CanPrintTopSalesperson() {
             return SelectedEntity != null;

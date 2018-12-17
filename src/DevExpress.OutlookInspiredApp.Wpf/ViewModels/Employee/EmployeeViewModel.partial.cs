@@ -10,7 +10,6 @@ namespace DevExpress.DevAV.ViewModels {
         protected override void OnEntityChanged() {
             base.OnEntityChanged();
             QuickLetter.Entity = Entity;
-            SetDefaultReport(ReportInfoFactory.EmployeeProfile(Entity));
             if(Entity != null)
                 Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Edit Employee: {0}", 
                     string.IsNullOrEmpty(Entity.FullName) ? "<New>" : Entity.FullName));
@@ -56,19 +55,15 @@ namespace DevExpress.DevAV.ViewModels {
             return base.SaveCore();
         }
         public void PrintEmployeeProfile() {
-            ShowReport(ReportInfoFactory.EmployeeProfile(Entity), "Profile");
         }
         public bool CanPrintEmployeeProfile() {
             return Entity != null;
         }
         public void PrintSummaryReport() {
-            ShowReport(ReportInfoFactory.EmployeeSummary(Repository.ToList()), "Summary");
         }
         public void PrintDirectory() {
-            ShowReport(ReportInfoFactory.EmployeeDirectory(Repository.ToList()), "Directory");
         }
         public void PrintTaskList() {
-            //ShowReport(ReportInfoFactory.EmployeeTaskList(UnitOfWork.Tasks.ToList()), "TaskList");
         }
 
         void ShowReport(IReportInfo reportInfo, string reportId) {

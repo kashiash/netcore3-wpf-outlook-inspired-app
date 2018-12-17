@@ -37,30 +37,22 @@ namespace DevExpress.DevAV.ViewModels {
         }
         protected override void OnSelectedEntityChanged() {
             base.OnSelectedEntityChanged();
-            SetDefaultReport(ReportInfoFactory.SalesInvoice(SelectedEntity));
         }
         protected override void OnEntitiesAssigned(Func<Order> getSelectedEntityCallback) {
             RestoreSelection();
         }
         public void PrintInvoice() {
-            ShowReport(ReportInfoFactory.SalesInvoice(SelectedEntity), "Invoice");
         }
         public bool CanPrintInvoice() {
             return SelectedEntity != null;
         }
         public void PrintSummaryReport() {
-            ShowReport(ReportInfoFactory.SalesOrdersSummaryReport(QueriesHelper.GetSaleSummaries(CreateUnitOfWork().OrderItems)), "OrdersSummary");
         }
         public void PrintSalesAnalysisReport() {
-            ShowReport(ReportInfoFactory.SalesAnalysisReport(QueriesHelper.GetSaleAnalysis(CreateUnitOfWork().OrderItems)), "Analysis");
         }
         public void ShowRevenueReport() {
-            DocumentManagerService.CreateDocument("OrderRevenueReportView",
-                OrderRevenueViewModel.Create(QueriesHelper.GetRevenueReportItems(CreateUnitOfWork().OrderItems), RevenueReportFormat.Summary), null, this).Show();
         }
         public virtual void ShowRevenueAnalysisReport() {
-            DocumentManagerService.CreateDocument("OrderRevenueReportView",
-                OrderRevenueViewModel.Create(QueriesHelper.GetRevenueAnalysisReportItems(CreateUnitOfWork().OrderItems, SelectedEntity.StoreId.Value), RevenueReportFormat.Analysis), null, this).Show();
         }
         void ShowReport(IReportInfo reportInfo, string reportId) {
             ExportService.ShowReport(reportInfo);
