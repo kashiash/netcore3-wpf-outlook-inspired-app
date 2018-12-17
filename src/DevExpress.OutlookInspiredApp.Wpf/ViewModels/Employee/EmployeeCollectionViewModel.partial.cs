@@ -52,7 +52,6 @@ namespace DevExpress.DevAV.ViewModels {
                 SelectedEntity.Address = destination;
                 Save(SelectedEntity);
             });
-            Xpf.DemoBase.Helpers.Logger.Log("OutlookInspiredApp: View Employee Map");
             this.GetRequiredService<IDocumentManagerService>().CreateDocument("EmployeeMapView", mapViewModel, null, this).Show();
         }
         public bool CanShowMap() {
@@ -75,7 +74,6 @@ namespace DevExpress.DevAV.ViewModels {
         void ShowReport(IReportInfo reportInfo, string reportId) {
             ExportService.ShowReport(reportInfo);
             PrintService.ShowReport(reportInfo);
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Employees: {0}", reportId));
         }
         void SetDefaultReport(IReportInfo reportInfo) {
             if(this.IsInDesignMode()) return;

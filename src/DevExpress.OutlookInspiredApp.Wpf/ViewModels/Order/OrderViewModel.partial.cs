@@ -14,8 +14,6 @@ namespace DevExpress.DevAV.ViewModels {
             base.OnEntityChanged();
             if(Entity != null) { 
                 SpreadsheetDataSource = new Tuple<IDevAVDbUnitOfWork, Order>(this.UnitOfWork, Entity);
-                Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Edit Order: {0}",
-                    string.IsNullOrEmpty(Entity.InvoiceNumber) ? "<New>" : Entity.InvoiceNumber));
             }
         }
         public virtual void ResetAll() {

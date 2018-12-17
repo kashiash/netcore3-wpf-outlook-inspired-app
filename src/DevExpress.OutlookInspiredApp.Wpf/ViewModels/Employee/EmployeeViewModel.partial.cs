@@ -10,9 +10,6 @@ namespace DevExpress.DevAV.ViewModels {
         protected override void OnEntityChanged() {
             base.OnEntityChanged();
             QuickLetter.Entity = Entity;
-            if(Entity != null)
-                Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Edit Employee: {0}", 
-                    string.IsNullOrEmpty(Entity.FullName) ? "<New>" : Entity.FullName));
         }
         protected override bool TryClose() {
             var closed = base.TryClose();
@@ -69,7 +66,6 @@ namespace DevExpress.DevAV.ViewModels {
         void ShowReport(IReportInfo reportInfo, string reportId) {
             ExportService.ShowReport(reportInfo);
             PrintService.ShowReport(reportInfo);
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Employee: {0}", reportId));
         }
         void SetDefaultReport(IReportInfo reportInfo) {
             if(this.IsInDesignMode()) return;

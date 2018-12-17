@@ -31,32 +31,6 @@ namespace DevExpress.DevAV.Views.Product {
             ((Mvvm.ISplashScreenService)splashScreenService).HideSplashScreen();
         }
         void LoadData() {
-            ProductAnalysisViewModel ViewModel = (ProductAnalysisViewModel)this.DataContext;
-            spreadsheetControl.Document.BeginUpdate();
-            var financialReportWorksheet = spreadsheetControl.Document.Worksheets["Financial Report"];
-            var financialReportItems = ViewModel.GetFinancialReport().ToList(); // materialize
-            var frProducts = financialReportItems
-                .Select(i => i.ProductName)
-                .Distinct()
-                .OrderBy(i => i).ToList();
-            financialReportWorksheet.Import(frProducts, 17, 1, true);
-            var startReportsDate = financialReportItems.Min(x => x.Date);
-            foreach(ProductsAnalysis.Item item in financialReportItems) {
-                int rowOffset = frProducts.IndexOf(item.ProductName);
-                int columnOffset = (int)(AnalysisPeriod.GetMonthOffsetFromStart(item.Date, startReportsDate) / 12);
-                if (rowOffset < 0 || columnOffset < 0) continue;
-                financialReportWorksheet.Cells[17 + rowOffset, 3 + columnOffset * 2].SetValue(item.Total);
-            }
-            var financialDataWorksheet = spreadsheetControl.Document.Worksheets["Financial Data"];
-            var financialDataItems = ViewModel.GetFinancialData().ToList(); // materialize
-            foreach(ProductsAnalysis.Item item in financialDataItems) {
-                int rowOffset = AnalysisPeriod.GetMonthOffsetFromStart(item.Date, startReportsDate) - 1;
-                int columnOffset = GetColumnIndex(item.ProductCategory);
-                if (rowOffset < 0 || columnOffset < 0) continue;
-                financialDataWorksheet.Cells[6 + rowOffset, 3 + columnOffset].SetValue(item.Total);
-            }
-            spreadsheetControl.Document.Worksheets.ActiveWorksheet = financialReportWorksheet;
-            spreadsheetControl.Document.EndUpdate();
         }
         int GetColumnIndex(ProductCategory category) {
             switch(category) {

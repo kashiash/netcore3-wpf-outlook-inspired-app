@@ -36,7 +36,6 @@ namespace DevExpress.DevAV {
             if(e.NewValue is FilterItem) { 
                 SelectedItem = e.NewValue;
                 var name = ((FilterItem)e.NewValue).Name ?? "filter";
-                Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Change Filter: {0}", name));
             }
         }
 

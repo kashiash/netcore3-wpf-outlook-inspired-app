@@ -70,7 +70,6 @@ namespace DevExpress.DevAV.ViewModels {
                 ActiveModule.FilterTreeViewModel.SetViewModel(DocumentManagerService.ActiveDocument.Content);
             var title = Convert.ToString(DocumentManagerService.ActiveDocument.Title);
             MainWindowService.Title = title + " - DevAV";
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Select module: {0}", title.ToUpper()));
             FinishModuleChangingDispatcherService.BeginInvoke(() => {
                 UpdateWorkspace(oldModule, ActiveModule);
             });

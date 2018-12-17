@@ -36,35 +36,6 @@ namespace DevExpress.DevAV.Common.View {
                 AssociatedObject.DocumentSource = null;
                 return;
             }
-            using(PdfDocumentProcessor processor = new PdfDocumentProcessor()) {
-                processor.LoadDocument(DocumentSource);
-                AddWatermark(processor, Text);
-                var tmpFile = Path.GetTempFileName();
-                processor.SaveDocument(tmpFile);
-                AssociatedObject.OpenDocument(tmpFile);
-            }
-        }
-
-        static void AddWatermark(PdfDocumentProcessor processor, string watermark) {
-            var pages = processor.Document.Pages;
-            for(int i = 0; i < pages.Count; i++) {
-                using(var graphics = processor.CreateGraphics()) {
-                    using(Font font = new Font("Segoe UI", 48, System.Drawing.FontStyle.Regular)) {
-                        RectangleF pageLayout = new RectangleF(
-                             -(float)pages[i].CropBox.Width * 0.35f,
-                             (float)pages[i].CropBox.Height * 0.1f,
-                             (float)pages[i].CropBox.Width * 1.25f,
-                             (float)pages[i].CropBox.Height);
-                        var angle = Math.Asin((double)pageLayout.Width / (double)pageLayout.Height) * 180.0 / Math.PI;
-                        graphics.TranslateTransform(-pageLayout.X, -pageLayout.Y);
-                        graphics.RotateTransform((float)angle);
-
-                        using(SolidBrush textBrush = new SolidBrush(Color.FromArgb(100, Color.Red)))
-                            graphics.DrawString(watermark, font, textBrush, new PointF(50, 50));
-                    }
-                    graphics.AddToPageForeground(pages[i]);
-                }
-            }
         }
     }
 }

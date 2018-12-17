@@ -34,7 +34,6 @@ namespace DevExpress.DevAV.ViewModels {
                 SelectedEntity = selectedEntity;
             }));
             ActiveRecord = -1;
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: View Quick Letter: {0}", selectedTemplateName));
         }
         Locker locker = new Locker();
         public virtual TEntity SelectedEntity { get; set; }

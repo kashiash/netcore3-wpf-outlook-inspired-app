@@ -23,7 +23,6 @@ namespace DevExpress.DevAV.ViewModels {
         }
         public void ShowSalesMap(Customer customer) {
             CustomerMapViewModel mapViewModel = ViewModelSource.Create(() => new CustomerMapViewModel());
-            Xpf.DemoBase.Helpers.Logger.Log("OutlookInspiredApp: View Sales Map");
             this.GetRequiredService<IDocumentManagerService>().CreateDocument("CitiesMapView", mapViewModel, customer.Id, this).Show();
         }
         public bool CanShowSalesMap(Customer customer) {
@@ -64,7 +63,6 @@ namespace DevExpress.DevAV.ViewModels {
         void ShowReport(IReportInfo reportInfo, string reportId) {
             ExportService.ShowReport(reportInfo);
             PrintService.ShowReport(reportInfo);
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Customers: {0}", reportId));
         }
         void SetDefaultReport(IReportInfo reportInfo) {
             if(this.IsInDesignMode()) return;

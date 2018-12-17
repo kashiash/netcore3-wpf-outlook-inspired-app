@@ -10,10 +10,12 @@ using DevExpress.Internal;
 using DevExpress.Mvvm.Native;
 using DevExpress.Mvvm.UI;
 using DevExpress.Xpf.Core;
-using DevExpress.Xpf.DemoLauncher;
 
 namespace DevExpress.DevAV {
     public partial class App : Application {
+        static App() {
+            ApplicationThemeHelper.UseLegacyDefaultTheme = true;
+        }
         protected override void OnStartup(StartupEventArgs e) {
             base.OnStartup(e);
             ApplicationThemeHelper.ApplicationThemeName = Theme.Office2016ColorfulSE.Name;

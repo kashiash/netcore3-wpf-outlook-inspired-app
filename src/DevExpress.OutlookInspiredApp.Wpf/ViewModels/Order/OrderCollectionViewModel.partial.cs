@@ -57,7 +57,6 @@ namespace DevExpress.DevAV.ViewModels {
         void ShowReport(IReportInfo reportInfo, string reportId) {
             ExportService.ShowReport(reportInfo);
             PrintService.ShowReport(reportInfo);
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Sales: {0}", reportId));
         }
         void SetDefaultReport(IReportInfo reportInfo) {
 //            this.GetRequiredService<IReportService>("DocumentViewerService").SetDefaultReport(reportInfo);
@@ -69,7 +68,6 @@ namespace DevExpress.DevAV.ViewModels {
         IReportService ExportService { get { return this.GetRequiredService<IReportService>("ExportService"); } }
 
         public void ShowMap() {
-            Xpf.DemoBase.Helpers.Logger.Log("OutlookInspiredApp: View Orders Map");
             DocumentManagerService.CreateDocument("OrderMapView", OrderMapViewModel.Create(SelectedEntity), null, this).Show();
         }
         public bool CanShowMap() {
@@ -153,7 +151,6 @@ namespace DevExpress.DevAV.ViewModels {
 
         public void QuickReport(ReportFormat format) {
             var quickReportsViewModel = OrderQuickReportsViewModel.Create(SelectedEntity, format);
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: View Order Quick Report: {0}", format.ToString()));
             DocumentManagerService.CreateDocument(string.Format("Order{0}QuickReportView", format.ToString()), quickReportsViewModel, null, this).Show();
         }
         public bool CanQuickReport(ReportFormat format) {

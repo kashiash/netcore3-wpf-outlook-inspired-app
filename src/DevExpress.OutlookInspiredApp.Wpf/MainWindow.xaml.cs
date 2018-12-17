@@ -12,9 +12,6 @@ namespace DevExpress.DevAV {
                 WindowState = WindowState.Maximized;
             DevExpress.Utils.About.UAlgo.Default.DoEventObject(DevExpress.Utils.About.UAlgo.kDemo, DevExpress.Utils.About.UAlgo.pWPF, this); //DEMO_REMOVE
             EventManager.RegisterClassHandler(typeof(BarItem), BarItem.ItemClickEvent, new ItemClickEventHandler(OnBarItemClick), true);
-            Xpf.Core.ThemeManager.AddThemeChangingHandler(this, (s, e) => {
-                Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Change Theme: {0}", Xpf.Core.ApplicationThemeHelper.ApplicationThemeName));
-            });
         }
 
         void MainWindowLoaded(object sender, RoutedEventArgs e) {
@@ -24,8 +21,6 @@ namespace DevExpress.DevAV {
         void OnBarItemClick(object sender, ItemClickEventArgs e) {
             var barItem = (BarItem)sender;
             var content = barItem.Content ?? barItem.ActualCustomizationContent;
-            if(content != null)
-                Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: BarItemClick: {0}", content.ToString()));
         }
     }
 }

@@ -60,7 +60,6 @@ namespace DevExpress.DevAV.ViewModels {
         void ShowReport(IReportInfo reportInfo, string reportId) {
             ExportService.ShowReport(reportInfo);
             PrintService.ShowReport(reportInfo);
-            Xpf.DemoBase.Helpers.Logger.Log(string.Format("OutlookInspiredApp: Create Report : Products: {0}", reportId));
         }
         void SetDefaultReport(IReportInfo reportInfo) {
             if(this.IsInDesignMode()) return;
@@ -72,7 +71,6 @@ namespace DevExpress.DevAV.ViewModels {
 
         public void ShowMap() {
             ProductMapViewModel mapViewModel = ViewModelSource.Create(() => new ProductMapViewModel());
-            Xpf.DemoBase.Helpers.Logger.Log("OutlookInspiredApp: View ProductCollection Map");
             this.GetRequiredService<IDocumentManagerService>().CreateDocument("CitiesMapView", mapViewModel, SelectedEntity.Id, this).Show();
         }
         public bool CanShowMap() {
