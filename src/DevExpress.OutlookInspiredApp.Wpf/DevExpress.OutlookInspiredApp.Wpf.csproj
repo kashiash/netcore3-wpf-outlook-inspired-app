@@ -796,6 +796,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf" Version="18.2.4-ctp" />
     <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.csproj" />
   </ItemGroup>
 
