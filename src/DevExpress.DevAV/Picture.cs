@@ -1,8 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
-using DevExpress.Utils;
-using DevExpress.XtraEditors.Controls;
-using System.Runtime.Serialization;
+﻿using System.Drawing;
 using System.Collections.Generic;
 
 namespace DevExpress.DevAV {

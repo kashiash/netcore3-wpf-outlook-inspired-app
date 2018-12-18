@@ -1,11 +1,5 @@
-﻿using DevExpress.Utils;
-using DevExpress.XtraEditors.Controls;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.Serialization;
 
 namespace DevExpress.DevAV {
     public class Crest : DatabaseObject {

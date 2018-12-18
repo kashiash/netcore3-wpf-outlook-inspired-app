@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
-using System.Linq;
-using DevExpress.Utils;
-using DevExpress.XtraEditors.Controls;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
 
 namespace DevExpress.DevAV {
     public class CustomerStore : DatabaseObject {

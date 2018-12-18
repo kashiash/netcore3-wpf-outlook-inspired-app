@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.IO;
-using DevExpress.Utils;
-using System.Runtime.Serialization;
 
 namespace DevExpress.DevAV {
     public enum ProductCategory {
