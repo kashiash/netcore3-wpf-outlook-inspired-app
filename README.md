@@ -28,6 +28,18 @@ Install the following software to build and run the demo application:
 
 **DevExpress.OutlookInspiredApp.Wpf** - contains the demo application source code
 
+## How to integrate DevExpress WPF Controls into a .NET Core 3 application
+
+You need DevExpress NuGet packages to create a .Net Core 3 project. Follow the steps below to add packages to a solution:
+
+1. Register the DevExpress Early Access feed in Visual Studio's NuGet Package Manager.
+
+   https://nuget.devexpress.com/early-access/api
+
+   See the [Setup Visual Studio's NuGet Package Manager](https://docs.devexpress.com/GeneralInformation/116698/installation/install-devexpress-controls-using-nuget-packages/setup-visual-studio%27s-nuget-package-manager) topic for more information.
+
+3. Install the DevExpress.WindowsDesktop.Wpf package for .Net Core 3 development. This package provides the DevExpress WPF components.
+
 ## Feedback
 
 We'd like to hear from you: wpfteam@devexpress.com
